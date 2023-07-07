@@ -1,7 +1,7 @@
 {
   "name": "@kaleyra/video-cordova-plugin",
   "private": true,
-  "version": "0.10.1",
+  "version": "1.0.0",
   "main": "./www/out/kaleyra-video.min.js",
   "types": "./www/out/types/KaleyraVideo.d.ts",
   "description": "Kaleyra Video plugin for Cordova.",
