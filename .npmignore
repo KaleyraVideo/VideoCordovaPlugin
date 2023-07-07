@@ -13,10 +13,9 @@ src/android/src/androidTest
 src/android/src/test
 src/android/src/main/AndroidManifest.xml
 src/android/src/main/res
-src/android/build.gradle
 www/src
 .babelrc
-build.gradle
+./build.gradle
 gradlew.bat
 kaleyra-video.png
 tslint.json
@@ -37,3 +36,4 @@ local.properties
 plugin.iml
 src/android/cordova-plugin-android.iml
 test/ios/
+example/
