@@ -1,8 +1,8 @@
 {
-  "name": "com.bandyer.cordovasampleapp",
-  "displayName": "BandyerCordovaSampleApp",
+  "name": "com.kaleyra.videoCordovaExample",
+  "displayName": "KaleyraVideoCordova",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that showcases Bandyer Mobile SDK library capabilities",
+  "description": "A sample Apache Cordova application that showcases Kaleyra Video Mobile SDK library capabilities",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "Bandyer S.r.l.",
+  "author": "Kaleyra S.p.a.",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
     "cordova-plugin-androidx": "^1.0.2",
