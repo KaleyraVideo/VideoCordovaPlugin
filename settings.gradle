@@ -1,0 +1,5 @@
+include ':cordova_plugin'
+include ':native_bridge'
+
+project(':cordova_plugin').projectDir = new File('src/android')
+project(':native_bridge').projectDir = new File('native-bridge/android')

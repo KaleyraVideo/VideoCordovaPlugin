@@ -1,0 +1,15 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "Kaleyra Video React Native Module",
+  "excludeNotDocumented": true,
+  "entryPointStrategy": "expand",
+  "entryPoints": [
+    "native-bridge/TypeScript/types",
+    "native-bridge/TypeScript/errors",
+    "native-bridge/TypeScript/Regions.ts",
+    "native-bridge/TypeScript/Environments.ts",
+    "./www/src/events/Events.ts",
+    "./www/src/KaleyraVideo.ts"
+  ],
+  "out": "./docs"
+}

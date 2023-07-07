@@ -1,0 +1,41 @@
+// Copyright © 2018-2023 Kaleyra S.p.a. All Rights Reserved.
+// See LICENSE for licensing information
+
+def crossPlatformSupportPath = "${project.projectDir.getAbsolutePath()}/../../native-bridge/android"
+apply from: "${crossPlatformSupportPath}/build.gradle"
+
+def jsonFile = file("${project.projectDir.getAbsolutePath()}/../../package.json")
+def properties = new groovy.json.JsonSlurper().parseText(jsonFile.text)
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "31.0.0"
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 31
+        versionCode 1
+        versionName properties.version
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'LIBRARY_VERSION_NAME', "\"${properties.version}\""
+        }
+        debug {
+            buildConfigField 'String', 'LIBRARY_VERSION_NAME', "\"${properties.version}\""
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compileOnly "org.apache.cordova:framework:11.0.0"
+    implementation project(":native_bridge")
+}

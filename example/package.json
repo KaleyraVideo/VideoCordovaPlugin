@@ -1,0 +1,58 @@
+{
+  "name": "com.bandyer.cordovasampleapp",
+  "displayName": "BandyerCordovaSampleApp",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that showcases Bandyer Mobile SDK library capabilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "android": "cordova platforms rm android --nosave && cordova platforms add android --nosave && cordova run android",
+    "emulatorAndroid": "cordova platforms rm android --nosave && cordova platforms add android --nosave && cordova run android --emulator",
+    "ios": "cordova platforms rm ios --nosave && cordova platforms add ios --nosave && cordova run ios",
+    "updateIos": "cordova platforms rm ios --nosave && cordova platforms add ios --nosave",
+    "emulatorIos": "cordova platforms rm ios --nosave && cordova platforms add ios --nosave && cordova run ios --emulator"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Bandyer S.r.l.",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "cordova-plugin-androidx": "^1.0.2",
+    "cordova-plugin-androidx-adapter": "^1.1.0",
+    "cordova-plugin-enable-multidex": "^0.2.0",
+    "recursive-readdir": "^2.2.2"
+  },
+  "devDependencies": {
+    "@havesource/cordova-plugin-push": "github:kenfouo/cordova-plugin-push",
+    "@kaleyra/video-cordova-plugin": "file:..",
+    "cordova-android": "^11.0.0",
+    "cordova-ios": "^6.3.0",
+    "cordova-plugin-add-swift-support": "^2.0.2",
+    "cordova-plugin-advanced-http": "^3.3.1",
+    "cordova-plugin-device": "git+https://github.com/apache/cordova-plugin-device.git",
+    "cordova-plugin-file": "^7.0.0",
+    "cordova-support-kotlin": "git+https://github.com/Bandyer/cordova-support-kotlin.git"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-enable-multidex": {},
+      "cordova-support-kotlin": {},
+      "cordova-plugin-androidx": {},
+      "cordova-plugin-androidx-adapter": {},
+      "cordova-plugin-advanced-http": {
+        "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1"
+      },
+      "@havesource/cordova-plugin-push": {
+        "ANDROIDX_CORE_VERSION": "1.6.+",
+        "FCM_VERSION": "23.+",
+        "IOS_FIREBASE_MESSAGING_VERSION": "~> 8.1.1"
+      },
+      "@kaleyra/video-cordova-plugin": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}

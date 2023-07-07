@@ -1,0 +1,35 @@
+PODS:
+  - Bandyer (3.6.3)
+  - Cordova (6.2.0):
+    - Cordova/Cordova (= 6.2.0)
+  - Cordova/Cordova (6.2.0)
+  - OCHamcrest (8.0.0)
+  - OCMockito (6.0.0):
+    - OCHamcrest (~> 8.0)
+  - SwiftHamcrest (2.2.4)
+
+DEPENDENCIES:
+  - Bandyer (~> 3.6.3)
+  - Cordova (~> 6)
+  - OCHamcrest (~> 8.0)
+  - OCMockito (~> 6.0)
+  - SwiftHamcrest (= 2.2.4)
+
+SPEC REPOS:
+  trunk:
+    - Bandyer
+    - Cordova
+    - OCHamcrest
+    - OCMockito
+    - SwiftHamcrest
+
+SPEC CHECKSUMS:
+  Bandyer: d9f2aa82328210b5fc088b913e1cd7084cf96004
+  Cordova: 7e83572fd98d1391ce92d93c081ce8d99d8cb014
+  OCHamcrest: a613690381f1dac7637c18962c10dbe8feca4bb5
+  OCMockito: 780f04370226f81a9d972c97d1203864ef609f5b
+  SwiftHamcrest: a45dd878978049c0953259aa01c34fd7258d0340
+
+PODFILE CHECKSUM: 89d014e44ed905e9db43da339629bb369eeb3ded
+
+COCOAPODS: 1.12.1

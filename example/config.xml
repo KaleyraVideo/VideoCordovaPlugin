@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns:android="http://schemas.android.com/apk/res/android" id="com.kaleyra.videoCordovaExample"
+        version="1.0.0" xmlns="http://www.w3.org/ns/widgets">
+    <name>KaleyraVideoCordova</name>
+    <description>
+        A sample Apache Cordova application that showcases Kaleyra Video Mobile SDK library capabilities
+    </description>
+    <author email="support@kaleyra.com" href="https://www.kaleyra.com/video/">
+        Kaleyra S.p.a.
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="22" />
+        <preference name="android-targetSdkVersion" value="31" />
+        <preference name="OKHTTP_VERSION" default="3.12.10" />
+        <preference name="GradlePluginKotlinVersion" value="1.6.10" />
+        <allow-intent href="market:*" />
+        <resource-file src="google-services.json" target="app/google-services.json" />
+        <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">
+            <service
+                    android:name="com.kaleyra.video_hybrid_native_bridge.notifications.KaleyraVideoNotificationService"
+                    android:enabled="true" android:exported="false"
+                    android:permission="android.permission.BIND_JOB_SERVICE">
+                <intent-filter>
+                    <action android:name="com.kaleyra.VideoNotificationEvent" />
+
+                    <!--////////OneSignal CUSTOM DATA PATH  /////////-->
+                    <!-- <data android:path="custom.a" /> -->
+
+                    <!--////////Pushraven CUSTOM DATA PATH/////////-->
+                    <!--<data android:path="definedServerSide" />-->
+
+                    <!--////////node-pushnotifications CUSTOM DATA PATH/////////-->
+                    <data android:path="message.kaleyra" />
+                </intent-filter>
+            </service>
+        </config-file>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="deployment-target" value="11.0" />
+        <preference name="BackupWebStorage" value="none" />
+        <preference name="UseSwiftLanguageVersion" value="5" />
+        <edit-config file="*-Info.plist" mode="merge" target="UIBackgroundModes">
+            <array>
+                <string>audio</string>
+                <string>remote-notification</string>
+                <string>voip</string>
+            </array>
+        </edit-config>
+        <resource-file src="www/assets/custom_ringtone.mp3" target="custom_ringtone.mp3" />
+        <resource-file src="www/assets/logo_transparent.png" target="logo_transparent.png" />
+    </platform>
+</widget>

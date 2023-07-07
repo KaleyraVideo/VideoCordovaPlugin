@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./www/out/types",
+    "allowJs": true,
+    "target": "es5",
+    "declaration": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "transform": "typia/lib/transform"
+      }
+    ],
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.promise",
+      "es2015.collection"
+    ]
+  },
+  "include": [
+    "www/src/**/*.ts",
+    "native-bridge/TypeScript/**/*.ts"
+  ]
+}

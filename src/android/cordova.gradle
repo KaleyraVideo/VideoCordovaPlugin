@@ -1,0 +1,16 @@
+// Copyright © 2018-2023 Kaleyra S.p.a. All Rights Reserved.
+// See LICENSE for licensing information
+
+ext {
+    if (project.hasProperty('cdvCompileSdkVersion')) {
+        cdvCompileSdkVersion = 31
+    }
+
+    if (project.hasProperty('cdvBuildToolsVersion')) {
+        cdvBuildToolsVersion = '31.0.0'
+    }
+
+    if (project.hasProperty('cdvTargetSdkVersion')) {
+        cdvTargetSdkVersion = 31
+    }
+}

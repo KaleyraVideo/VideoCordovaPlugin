@@ -1,0 +1,1234 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12D3457AFBD4B60E810D8E83 /* Pods_KaleyraVideoCordovaPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF411674223EC17D82005D5 /* Pods_KaleyraVideoCordovaPlugin.framework */; };
+		689CA6A47F987E609A4D1AF3 /* Pods_KaleyraVideoCordovaPluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A89B1AF6CA966B638E9D97 /* Pods_KaleyraVideoCordovaPluginTests.framework */; };
+		6D0E0F68289C133700D2F248 /* JSONDecodingTestsCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E0F67289C133700D2F248 /* JSONDecodingTestsCase.swift */; };
+		6D0E0F6E289C188B00D2F248 /* BoolMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E0F6D289C188B00D2F248 /* BoolMatchers.swift */; };
+		6D1D72F1289A79410068E335 /* VideoNativePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D72F0289A79410068E335 /* VideoNativePlugin.swift */; };
+		6D3A42EC28990FB4000A05FA /* NSString+PushTokenData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A42EB28990FB4000A05FA /* NSString+PushTokenData.m */; };
+		6D3A42FC28996DE2000A05FA /* UserDetailsFixtureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A42FB28996DE2000A05FA /* UserDetailsFixtureFactory.swift */; };
+		6D3A43052899724F000A05FA /* CompletionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A43042899724F000A05FA /* CompletionSpy.swift */; };
+		6D98D776289813B9008EEF02 /* CordovaEventEmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D775289813B9008EEF02 /* CordovaEventEmitterTests.swift */; };
+		6D98D77A289818B3008EEF02 /* CordovaEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D779289818B3008EEF02 /* CordovaEventEmitter.swift */; };
+		6D98D7842898257A008EEF02 /* CommandDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D7832898257A008EEF02 /* CommandDelegateSpy.swift */; };
+		6D98D786289825C2008EEF02 /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D785289825C2008EEF02 /* Unwrap.swift */; };
+		6D98D78A289830F2008EEF02 /* CallClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D789289830F2008EEF02 /* CallClientStub.swift */; };
+		6D98D78D2898312E008EEF02 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D78B28983112008EEF02 /* Weak.swift */; };
+		6D98D78F28983144008EEF02 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D78E28983144008EEF02 /* TestHelpers.swift */; };
+		6D98D79728983586008EEF02 /* ChatClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D79628983586008EEF02 /* ChatClientStub.swift */; };
+		A91AADD62452E5AF007003AF /* BCPTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A91AADC62452E5AF007003AF /* BCPTestCase.m */; };
+		A92581A1268E0D8900FD4202 /* empty_group.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92581A0268E0D5200FD4202 /* empty_group.plist */; };
+		A92581A3268E0E0500FD4202 /* empty_extension_identifier.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92581A2268E0DE600FD4202 /* empty_extension_identifier.plist */; };
+		A92CD25726A6B093001A3E04 /* not_available_group_identifier.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92CD25626A6AF5E001A3E04 /* not_available_group_identifier.plist */; };
+		A92CD25926A6B0DA001A3E04 /* not_available_extension_identifier.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92CD25826A6B0C4001A3E04 /* not_available_extension_identifier.plist */; };
+		A9637FFA234CC8C20050AAA7 /* KaleyraVideoCordovaPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C31AF822C22D1100BC33D5 /* KaleyraVideoCordovaPlugin.framework */; };
+		A992C406268DD33E001EBBAB /* BCPiOS12AndAboveTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A992C405268DD33E001EBBAB /* BCPiOS12AndAboveTestCase.m */; };
+		A992C40E268DD6E0001EBBAB /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = A992C40D268DD6E0001EBBAB /* text.txt */; };
+		A992C410268DD8BD001EBBAB /* valid_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C40F268DD8BD001EBBAB /* valid_config.plist */; };
+		A992C414268DEA79001EBBAB /* missing_group.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C413268DE9F3001EBBAB /* missing_group.plist */; };
+		A992C416268DEB10001EBBAB /* missing_extension_identifier.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C415268DEAF0001EBBAB /* missing_extension_identifier.plist */; };
+		A992C418268DEBCB001EBBAB /* missing_broadcast.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C417268DEB85001EBBAB /* missing_broadcast.plist */; };
+		A992C41A268DED46001EBBAB /* mismatched_group.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C419268DED35001EBBAB /* mismatched_group.plist */; };
+		A992C41C268DEDB9001EBBAB /* mismatched_extension_identifier.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C41B268DEDAA001EBBAB /* mismatched_extension_identifier.plist */; };
+		F94C2DD22A52FB1E004A9205 /* UserInterfacePresenter+MainQueueRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D7F2A52FB1E004A9205 /* UserInterfacePresenter+MainQueueRelay.swift */; };
+		F94C2DD32A52FB1E004A9205 /* UserInterfacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D802A52FB1E004A9205 /* UserInterfacePresenter.swift */; };
+		F94C2DD42A52FB1E004A9205 /* PresentingViewControllerViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D822A52FB1E004A9205 /* PresentingViewControllerViewControllerPresenter.swift */; };
+		F94C2DD52A52FB1E004A9205 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D832A52FB1E004A9205 /* ViewControllerPresenter.swift */; };
+		F94C2DD62A52FB1E004A9205 /* WindowViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D842A52FB1E004A9205 /* WindowViewControllerPresenter.swift */; };
+		F94C2DD72A52FB1E004A9205 /* KaleyraVideoSDKUserInterfacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D852A52FB1E004A9205 /* KaleyraVideoSDKUserInterfacePresenter.swift */; };
+		F94C2DD82A52FB1E004A9205 /* VideoHybridNativeBridgeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D872A52FB1E004A9205 /* VideoHybridNativeBridgeError.swift */; };
+		F94C2DD92A52FB1E004A9205 /* VideoHybridNativeBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D882A52FB1E004A9205 /* VideoHybridNativeBridge.swift */; };
+		F94C2DDA2A52FB1E004A9205 /* AccessTokenRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D8A2A52FB1E004A9205 /* AccessTokenRequester.swift */; };
+		F94C2DDB2A52FB1E004A9205 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D8B2A52FB1E004A9205 /* TokenProvider.swift */; };
+		F94C2DDC2A52FB1E004A9205 /* URL+FromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D8D2A52FB1E004A9205 /* URL+FromString.swift */; };
+		F94C2DDD2A52FB1E004A9205 /* DTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D8F2A52FB1E004A9205 /* DTOs.swift */; };
+		F94C2DDE2A52FB1E004A9205 /* CallType+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D902A52FB1E004A9205 /* CallType+Bandyer.swift */; };
+		F94C2DDF2A52FB1E004A9205 /* Region+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D912A52FB1E004A9205 /* Region+Bandyer.swift */; };
+		F94C2DE02A52FB1E004A9205 /* CallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D922A52FB1E004A9205 /* CallOptions+Decodable.swift */; };
+		F94C2DE12A52FB1E004A9205 /* CreateCallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D932A52FB1E004A9205 /* CreateCallOptions+Decodable.swift */; };
+		F94C2DE22A52FB1E004A9205 /* CallType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D942A52FB1E004A9205 /* CallType+Decodable.swift */; };
+		F94C2DE32A52FB1E004A9205 /* CallKitConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D952A52FB1E004A9205 /* CallKitConfiguration+Decodable.swift */; };
+		F94C2DE42A52FB1E004A9205 /* Environment+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D962A52FB1E004A9205 /* Environment+Decodable.swift */; };
+		F94C2DE52A52FB1E004A9205 /* Environment+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D972A52FB1E004A9205 /* Environment+Bandyer.swift */; };
+		F94C2DE62A52FB1E004A9205 /* KaleyraVideoConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D982A52FB1E004A9205 /* KaleyraVideoConfiguration+Decodable.swift */; };
+		F94C2DE72A52FB1E004A9205 /* IosConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D992A52FB1E004A9205 /* IosConfiguration+Decodable.swift */; };
+		F94C2DE82A52FB1E004A9205 /* VoipHandlingStrategy+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D9A2A52FB1E004A9205 /* VoipHandlingStrategy+Decodable.swift */; };
+		F94C2DE92A52FB1E004A9205 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D9B2A52FB1E004A9205 /* JSONDecodable.swift */; };
+		F94C2DEA2A52FB1E004A9205 /* AudioCallType+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D9C2A52FB1E004A9205 /* AudioCallType+Bandyer.swift */; };
+		F94C2DEB2A52FB1E004A9205 /* CreateCallOptions+Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D9D2A52FB1E004A9205 /* CreateCallOptions+Intent.swift */; };
+		F94C2DEC2A52FB1E004A9205 /* AudioCallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D9E2A52FB1E004A9205 /* AudioCallOptions+Decodable.swift */; };
+		F94C2DED2A52FB1E004A9205 /* ChatToolConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2D9F2A52FB1E004A9205 /* ChatToolConfiguration+Decodable.swift */; };
+		F94C2DEE2A52FB1E004A9205 /* CallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA02A52FB1E004A9205 /* CallOptions+Equatable.swift */; };
+		F94C2DEF2A52FB1E004A9205 /* AudioCallOptions+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA12A52FB1E004A9205 /* AudioCallOptions+Bandyer.swift */; };
+		F94C2DF02A52FB1E004A9205 /* CreateCallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA22A52FB1E004A9205 /* CreateCallOptions+Equatable.swift */; };
+		F94C2DF12A52FB1E004A9205 /* AccessTokenResponse+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA32A52FB1E004A9205 /* AccessTokenResponse+Decodable.swift */; };
+		F94C2DF22A52FB1E004A9205 /* AccessTokenRequest+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA42A52FB1E004A9205 /* AccessTokenRequest+Encodable.swift */; };
+		F94C2DF32A52FB1E004A9205 /* UserDetails+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA52A52FB1E004A9205 /* UserDetails+Decodable.swift */; };
+		F94C2DF42A52FB1E004A9205 /* RecordingType+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA62A52FB1E004A9205 /* RecordingType+Bandyer.swift */; };
+		F94C2DF52A52FB1E004A9205 /* UserDetailsFormat+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA72A52FB1E004A9205 /* UserDetailsFormat+Decodable.swift */; };
+		F94C2DF62A52FB1E004A9205 /* KaleyraVideoConfiguration+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA82A52FB1E004A9205 /* KaleyraVideoConfiguration+Bandyer.swift */; };
+		F94C2DF72A52FB1E004A9205 /* Region+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DA92A52FB1E004A9205 /* Region+Decodable.swift */; };
+		F94C2DF82A52FB1E004A9205 /* CallOptions+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DAA2A52FB1E004A9205 /* CallOptions+Bandyer.swift */; };
+		F94C2DF92A52FB1E004A9205 /* Tools+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DAB2A52FB1E004A9205 /* Tools+Decodable.swift */; };
+		F94C2DFA2A52FB1E004A9205 /* Array+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DAC2A52FB1E004A9205 /* Array+JSON.swift */; };
+		F94C2DFB2A52FB1E004A9205 /* ScreenShareToolConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DAD2A52FB1E004A9205 /* ScreenShareToolConfiguration+Decodable.swift */; };
+		F94C2DFC2A52FB1E004A9205 /* AudioCallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DAE2A52FB1E004A9205 /* AudioCallOptions+Equatable.swift */; };
+		F94C2DFD2A52FB1E004A9205 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DAF2A52FB1E004A9205 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift */; };
+		F94C2DFE2A52FB1E004A9205 /* AudioCallType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DB02A52FB1E004A9205 /* AudioCallType+Decodable.swift */; };
+		F94C2DFF2A52FB1E004A9205 /* UserDetails+Bandyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DB12A52FB1E004A9205 /* UserDetails+Bandyer.swift */; };
+		F94C2E002A52FB1E004A9205 /* RecordingType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DB22A52FB1E004A9205 /* RecordingType+Decodable.swift */; };
+		F94C2E012A52FB1E004A9205 /* MainQueueDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DB42A52FB1E004A9205 /* MainQueueDispatcher.swift */; };
+		F94C2E022A52FB1E004A9205 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DB52A52FB1E004A9205 /* Lock.swift */; };
+		F94C2E032A52FB1E004A9205 /* DispatchQueue+isMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DB62A52FB1E004A9205 /* DispatchQueue+isMain.swift */; };
+		F94C2E042A52FB1E004A9205 /* MainQueueRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DB72A52FB1E004A9205 /* MainQueueRelay.swift */; };
+		F94C2E052A52FB1E004A9205 /* CallWindowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DB92A52FB1E004A9205 /* CallWindowProtocol.swift */; };
+		F94C2E062A52FB1E004A9205 /* BandyerSDKProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DBA2A52FB1E004A9205 /* BandyerSDKProtocol.swift */; };
+		F94C2E072A52FB1E004A9205 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DBD2A52FB1E004A9205 /* EventEmitter.swift */; };
+		F94C2E082A52FB1E004A9205 /* Events+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DBE2A52FB1E004A9205 /* Events+Description.swift */; };
+		F94C2E092A52FB1E004A9205 /* Events+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DBF2A52FB1E004A9205 /* Events+CaseIterable.swift */; };
+		F94C2E0A2A52FB1E004A9205 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DC02A52FB1E004A9205 /* Events.swift */; };
+		F94C2E0B2A52FB1E004A9205 /* EventsReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DC22A52FB1E004A9205 /* EventsReporter.swift */; };
+		F94C2E0C2A52FB1E004A9205 /* PushTokenEventsReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DC32A52FB1E004A9205 /* PushTokenEventsReporter.swift */; };
+		F94C2E0D2A52FB1E004A9205 /* ChatClientEventsReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DC42A52FB1E004A9205 /* ChatClientEventsReporter.swift */; };
+		F94C2E0E2A52FB1E004A9205 /* CallClientEventsReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DC52A52FB1E004A9205 /* CallClientEventsReporter.swift */; };
+		F94C2E0F2A52FB1E004A9205 /* ClientState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DC62A52FB1E004A9205 /* ClientState.swift */; };
+		F94C2E102A52FB1E004A9205 /* BroadcastConfigurationPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DC82A52FB1E004A9205 /* BroadcastConfigurationPlistReader.swift */; };
+		F94C2E112A52FB1E004A9205 /* UsersDetailsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DCB2A52FB1E004A9205 /* UsersDetailsCache.swift */; };
+		F94C2E122A52FB1E004A9205 /* UsersDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DCD2A52FB1E004A9205 /* UsersDetailsProvider.swift */; };
+		F94C2E132A52FB1E004A9205 /* FormatterProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DCF2A52FB1E004A9205 /* FormatterProxy.swift */; };
+		F94C2E142A52FB1E004A9205 /* UserDetailsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2DD02A52FB1E004A9205 /* UserDetailsFormatter.swift */; };
+		F94C2E152A52FB1E004A9205 /* KaleyraVideoHybridNativeBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = F94C2DD12A52FB1E004A9205 /* KaleyraVideoHybridNativeBridge.h */; };
+		F982D7992A389C7500F83688 /* _KaleyraVideoHybridVersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F982D7982A389C7500F83688 /* _KaleyraVideoHybridVersionInfo.swift */; };
+		F982D79C2A389CA200F83688 /* _KaleyraVideoHybridVersionInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F982D79B2A389CA200F83688 /* _KaleyraVideoHybridVersionInfoTests.swift */; };
+		F9E62A842A544BEB00F34009 /* KaleyraVideoConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9E62A832A544BEB00F34009 /* KaleyraVideoConfig.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9637FFB234CC8C20050AAA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9C31AEF22C22D1100BC33D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9C31AF722C22D1100BC33D5;
+			remoteInfo = "Bandyer-Cordova-Plugin";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B0F558A63EE2D3C88D4A233 /* Pods-KaleyraVideoCordovaPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaleyraVideoCordovaPlugin.debug.xcconfig"; path = "Target Support Files/Pods-KaleyraVideoCordovaPlugin/Pods-KaleyraVideoCordovaPlugin.debug.xcconfig"; sourceTree = "<group>"; };
+		421B84A541F4F6F720D2A9AE /* Pods-KaleyraVideoCordovaPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaleyraVideoCordovaPlugin.release.xcconfig"; path = "Target Support Files/Pods-KaleyraVideoCordovaPlugin/Pods-KaleyraVideoCordovaPlugin.release.xcconfig"; sourceTree = "<group>"; };
+		62DD265AE93EA319DD7F40E8 /* plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = plugin.xml; sourceTree = "<group>"; };
+		62DD2B00C102037A66ABD40D /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		66935AEBFDEAE4A278CBB9D1 /* Pods-KaleyraVideoCordovaPluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaleyraVideoCordovaPluginTests.release.xcconfig"; path = "Target Support Files/Pods-KaleyraVideoCordovaPluginTests/Pods-KaleyraVideoCordovaPluginTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D0E0F67289C133700D2F248 /* JSONDecodingTestsCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodingTestsCase.swift; sourceTree = "<group>"; };
+		6D0E0F6D289C188B00D2F248 /* BoolMatchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolMatchers.swift; sourceTree = "<group>"; };
+		6D1D72F0289A79410068E335 /* VideoNativePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNativePlugin.swift; sourceTree = "<group>"; };
+		6D3A42EA28990FB4000A05FA /* NSString+PushTokenData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PushTokenData.h"; sourceTree = "<group>"; };
+		6D3A42EB28990FB4000A05FA /* NSString+PushTokenData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+PushTokenData.m"; sourceTree = "<group>"; };
+		6D3A42FB28996DE2000A05FA /* UserDetailsFixtureFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsFixtureFactory.swift; sourceTree = "<group>"; };
+		6D3A43042899724F000A05FA /* CompletionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionSpy.swift; sourceTree = "<group>"; };
+		6D98D774289813B9008EEF02 /* Bandyer-Cordova-PluginTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bandyer-Cordova-PluginTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D98D775289813B9008EEF02 /* CordovaEventEmitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordovaEventEmitterTests.swift; sourceTree = "<group>"; };
+		6D98D779289818B3008EEF02 /* CordovaEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordovaEventEmitter.swift; sourceTree = "<group>"; };
+		6D98D7832898257A008EEF02 /* CommandDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDelegateSpy.swift; sourceTree = "<group>"; };
+		6D98D785289825C2008EEF02 /* Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unwrap.swift; sourceTree = "<group>"; };
+		6D98D789289830F2008EEF02 /* CallClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallClientStub.swift; sourceTree = "<group>"; };
+		6D98D78B28983112008EEF02 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		6D98D78E28983144008EEF02 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		6D98D79628983586008EEF02 /* ChatClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClientStub.swift; sourceTree = "<group>"; };
+		A91AADC62452E5AF007003AF /* BCPTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPTestCase.m; sourceTree = "<group>"; };
+		A91AADCD2452E5AF007003AF /* BCPTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPTestCase.h; sourceTree = "<group>"; };
+		A91AADD22452E5AF007003AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A924CC35243782B300AD3805 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		A92581A0268E0D5200FD4202 /* empty_group.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = empty_group.plist; sourceTree = "<group>"; };
+		A92581A2268E0DE600FD4202 /* empty_extension_identifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = empty_extension_identifier.plist; sourceTree = "<group>"; };
+		A92CD25626A6AF5E001A3E04 /* not_available_group_identifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = not_available_group_identifier.plist; sourceTree = "<group>"; };
+		A92CD25826A6B0C4001A3E04 /* not_available_extension_identifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = not_available_extension_identifier.plist; sourceTree = "<group>"; };
+		A9637FF5234CC8C20050AAA7 /* KaleyraVideoCordovaPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaleyraVideoCordovaPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A992C404268DD33E001EBBAB /* BCPiOS12AndAboveTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCPiOS12AndAboveTestCase.h; sourceTree = "<group>"; };
+		A992C405268DD33E001EBBAB /* BCPiOS12AndAboveTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCPiOS12AndAboveTestCase.m; sourceTree = "<group>"; };
+		A992C40D268DD6E0001EBBAB /* text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
+		A992C40F268DD8BD001EBBAB /* valid_config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = valid_config.plist; sourceTree = "<group>"; };
+		A992C413268DE9F3001EBBAB /* missing_group.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = missing_group.plist; sourceTree = "<group>"; };
+		A992C415268DEAF0001EBBAB /* missing_extension_identifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = missing_extension_identifier.plist; sourceTree = "<group>"; };
+		A992C417268DEB85001EBBAB /* missing_broadcast.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = missing_broadcast.plist; sourceTree = "<group>"; };
+		A992C419268DED35001EBBAB /* mismatched_group.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mismatched_group.plist; sourceTree = "<group>"; };
+		A992C41B268DEDAA001EBBAB /* mismatched_extension_identifier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mismatched_extension_identifier.plist; sourceTree = "<group>"; };
+		A992C427268E074D001EBBAB /* BandyerConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = BandyerConfig.plist; path = res/ios/BandyerConfig.plist; sourceTree = "<group>"; };
+		A9C31AF822C22D1100BC33D5 /* KaleyraVideoCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KaleyraVideoCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C31AFC22C22D1100BC33D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF411674223EC17D82005D5 /* Pods_KaleyraVideoCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaleyraVideoCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6A89B1AF6CA966B638E9D97 /* Pods_KaleyraVideoCordovaPluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaleyraVideoCordovaPluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F94C2D7F2A52FB1E004A9205 /* UserInterfacePresenter+MainQueueRelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserInterfacePresenter+MainQueueRelay.swift"; sourceTree = "<group>"; };
+		F94C2D802A52FB1E004A9205 /* UserInterfacePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterfacePresenter.swift; sourceTree = "<group>"; };
+		F94C2D822A52FB1E004A9205 /* PresentingViewControllerViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F94C2D832A52FB1E004A9205 /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F94C2D842A52FB1E004A9205 /* WindowViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F94C2D852A52FB1E004A9205 /* KaleyraVideoSDKUserInterfacePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaleyraVideoSDKUserInterfacePresenter.swift; sourceTree = "<group>"; };
+		F94C2D872A52FB1E004A9205 /* VideoHybridNativeBridgeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHybridNativeBridgeError.swift; sourceTree = "<group>"; };
+		F94C2D882A52FB1E004A9205 /* VideoHybridNativeBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHybridNativeBridge.swift; sourceTree = "<group>"; };
+		F94C2D8A2A52FB1E004A9205 /* AccessTokenRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenRequester.swift; sourceTree = "<group>"; };
+		F94C2D8B2A52FB1E004A9205 /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
+		F94C2D8D2A52FB1E004A9205 /* URL+FromString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+FromString.swift"; sourceTree = "<group>"; };
+		F94C2D8F2A52FB1E004A9205 /* DTOs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTOs.swift; sourceTree = "<group>"; };
+		F94C2D902A52FB1E004A9205 /* CallType+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallType+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2D912A52FB1E004A9205 /* Region+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Region+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2D922A52FB1E004A9205 /* CallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D932A52FB1E004A9205 /* CreateCallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D942A52FB1E004A9205 /* CallType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallType+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D952A52FB1E004A9205 /* CallKitConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallKitConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D962A52FB1E004A9205 /* Environment+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D972A52FB1E004A9205 /* Environment+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2D982A52FB1E004A9205 /* KaleyraVideoConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KaleyraVideoConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D992A52FB1E004A9205 /* IosConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IosConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D9A2A52FB1E004A9205 /* VoipHandlingStrategy+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VoipHandlingStrategy+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D9B2A52FB1E004A9205 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		F94C2D9C2A52FB1E004A9205 /* AudioCallType+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallType+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2D9D2A52FB1E004A9205 /* CreateCallOptions+Intent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+Intent.swift"; sourceTree = "<group>"; };
+		F94C2D9E2A52FB1E004A9205 /* AudioCallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2D9F2A52FB1E004A9205 /* ChatToolConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatToolConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DA02A52FB1E004A9205 /* CallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+Equatable.swift"; sourceTree = "<group>"; };
+		F94C2DA12A52FB1E004A9205 /* AudioCallOptions+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2DA22A52FB1E004A9205 /* CreateCallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+Equatable.swift"; sourceTree = "<group>"; };
+		F94C2DA32A52FB1E004A9205 /* AccessTokenResponse+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccessTokenResponse+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DA42A52FB1E004A9205 /* AccessTokenRequest+Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccessTokenRequest+Encodable.swift"; sourceTree = "<group>"; };
+		F94C2DA52A52FB1E004A9205 /* UserDetails+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetails+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DA62A52FB1E004A9205 /* RecordingType+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordingType+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2DA72A52FB1E004A9205 /* UserDetailsFormat+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetailsFormat+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DA82A52FB1E004A9205 /* KaleyraVideoConfiguration+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KaleyraVideoConfiguration+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2DA92A52FB1E004A9205 /* Region+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Region+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DAA2A52FB1E004A9205 /* CallOptions+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2DAB2A52FB1E004A9205 /* Tools+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tools+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DAC2A52FB1E004A9205 /* Array+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+JSON.swift"; sourceTree = "<group>"; };
+		F94C2DAD2A52FB1E004A9205 /* ScreenShareToolConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScreenShareToolConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DAE2A52FB1E004A9205 /* AudioCallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+Equatable.swift"; sourceTree = "<group>"; };
+		F94C2DAF2A52FB1E004A9205 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift"; sourceTree = "<group>"; };
+		F94C2DB02A52FB1E004A9205 /* AudioCallType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallType+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DB12A52FB1E004A9205 /* UserDetails+Bandyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetails+Bandyer.swift"; sourceTree = "<group>"; };
+		F94C2DB22A52FB1E004A9205 /* RecordingType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordingType+Decodable.swift"; sourceTree = "<group>"; };
+		F94C2DB42A52FB1E004A9205 /* MainQueueDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueDispatcher.swift; sourceTree = "<group>"; };
+		F94C2DB52A52FB1E004A9205 /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		F94C2DB62A52FB1E004A9205 /* DispatchQueue+isMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+isMain.swift"; sourceTree = "<group>"; };
+		F94C2DB72A52FB1E004A9205 /* MainQueueRelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueRelay.swift; sourceTree = "<group>"; };
+		F94C2DB92A52FB1E004A9205 /* CallWindowProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallWindowProtocol.swift; sourceTree = "<group>"; };
+		F94C2DBA2A52FB1E004A9205 /* BandyerSDKProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandyerSDKProtocol.swift; sourceTree = "<group>"; };
+		F94C2DBD2A52FB1E004A9205 /* EventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
+		F94C2DBE2A52FB1E004A9205 /* Events+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Events+Description.swift"; sourceTree = "<group>"; };
+		F94C2DBF2A52FB1E004A9205 /* Events+CaseIterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Events+CaseIterable.swift"; sourceTree = "<group>"; };
+		F94C2DC02A52FB1E004A9205 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		F94C2DC22A52FB1E004A9205 /* EventsReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsReporter.swift; sourceTree = "<group>"; };
+		F94C2DC32A52FB1E004A9205 /* PushTokenEventsReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushTokenEventsReporter.swift; sourceTree = "<group>"; };
+		F94C2DC42A52FB1E004A9205 /* ChatClientEventsReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatClientEventsReporter.swift; sourceTree = "<group>"; };
+		F94C2DC52A52FB1E004A9205 /* CallClientEventsReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallClientEventsReporter.swift; sourceTree = "<group>"; };
+		F94C2DC62A52FB1E004A9205 /* ClientState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientState.swift; sourceTree = "<group>"; };
+		F94C2DC82A52FB1E004A9205 /* BroadcastConfigurationPlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadcastConfigurationPlistReader.swift; sourceTree = "<group>"; };
+		F94C2DCB2A52FB1E004A9205 /* UsersDetailsCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersDetailsCache.swift; sourceTree = "<group>"; };
+		F94C2DCD2A52FB1E004A9205 /* UsersDetailsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersDetailsProvider.swift; sourceTree = "<group>"; };
+		F94C2DCF2A52FB1E004A9205 /* FormatterProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterProxy.swift; sourceTree = "<group>"; };
+		F94C2DD02A52FB1E004A9205 /* UserDetailsFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsFormatter.swift; sourceTree = "<group>"; };
+		F94C2DD12A52FB1E004A9205 /* KaleyraVideoHybridNativeBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaleyraVideoHybridNativeBridge.h; sourceTree = "<group>"; };
+		F982D7982A389C7500F83688 /* _KaleyraVideoHybridVersionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _KaleyraVideoHybridVersionInfo.swift; sourceTree = "<group>"; };
+		F982D79B2A389CA200F83688 /* _KaleyraVideoHybridVersionInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _KaleyraVideoHybridVersionInfoTests.swift; sourceTree = "<group>"; };
+		F9E62A832A544BEB00F34009 /* KaleyraVideoConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = KaleyraVideoConfig.plist; path = res/ios/KaleyraVideoConfig.plist; sourceTree = "<group>"; };
+		FCFBB42363F7DA9A41661B2E /* Pods-KaleyraVideoCordovaPluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaleyraVideoCordovaPluginTests.debug.xcconfig"; path = "Target Support Files/Pods-KaleyraVideoCordovaPluginTests/Pods-KaleyraVideoCordovaPluginTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9637FF2234CC8C20050AAA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9637FFA234CC8C20050AAA7 /* KaleyraVideoCordovaPlugin.framework in Frameworks */,
+				689CA6A47F987E609A4D1AF3 /* Pods_KaleyraVideoCordovaPluginTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C31AF522C22D1100BC33D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12D3457AFBD4B60E810D8E83 /* Pods_KaleyraVideoCordovaPlugin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23F87D898896910F1885862F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B0F558A63EE2D3C88D4A233 /* Pods-KaleyraVideoCordovaPlugin.debug.xcconfig */,
+				421B84A541F4F6F720D2A9AE /* Pods-KaleyraVideoCordovaPlugin.release.xcconfig */,
+				FCFBB42363F7DA9A41661B2E /* Pods-KaleyraVideoCordovaPluginTests.debug.xcconfig */,
+				66935AEBFDEAE4A278CBB9D1 /* Pods-KaleyraVideoCordovaPluginTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		62DD2611AEC250BFC5FD7619 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				62DD2B00C102037A66ABD40D /* package.json */,
+				62DD265AE93EA319DD7F40E8 /* plugin.xml */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		6D98D7822898256A008EEF02 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				6D98D789289830F2008EEF02 /* CallClientStub.swift */,
+				6D98D7832898257A008EEF02 /* CommandDelegateSpy.swift */,
+				6D98D79628983586008EEF02 /* ChatClientStub.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		775E4F49F1451B193118C9D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCF411674223EC17D82005D5 /* Pods_KaleyraVideoCordovaPlugin.framework */,
+				C6A89B1AF6CA966B638E9D97 /* Pods_KaleyraVideoCordovaPluginTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A91AADC02452E5AF007003AF /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6D98D774289813B9008EEF02 /* Bandyer-Cordova-PluginTests-Bridging-Header.h */,
+				F9FE387C29D1822E00EC304C /* CordovaEvents */,
+				A91AADD22452E5AF007003AF /* Info.plist */,
+				F982D79A2A389C8500F83688 /* PluginInfo */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		A9638002234CCAE90050AAA7 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				A9A1A3F22458744E0077A3DD /* Base */,
+				6D98D7822898256A008EEF02 /* Doubles */,
+				A9A1A3EE24586E6A0077A3DD /* Helpers */,
+				A992C40C268DD6BE001EBBAB /* Resources */,
+				A91AADC02452E5AF007003AF /* Unit Tests */,
+			);
+			name = Test;
+			path = test/ios;
+			sourceTree = "<group>";
+		};
+		A992C40C268DD6BE001EBBAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A92581A2268E0DE600FD4202 /* empty_extension_identifier.plist */,
+				A92581A0268E0D5200FD4202 /* empty_group.plist */,
+				A992C41B268DEDAA001EBBAB /* mismatched_extension_identifier.plist */,
+				A992C419268DED35001EBBAB /* mismatched_group.plist */,
+				A992C417268DEB85001EBBAB /* missing_broadcast.plist */,
+				A992C415268DEAF0001EBBAB /* missing_extension_identifier.plist */,
+				A992C413268DE9F3001EBBAB /* missing_group.plist */,
+				A92CD25826A6B0C4001A3E04 /* not_available_extension_identifier.plist */,
+				A92CD25626A6AF5E001A3E04 /* not_available_group_identifier.plist */,
+				A992C40D268DD6E0001EBBAB /* text.txt */,
+				A992C40F268DD8BD001EBBAB /* valid_config.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A992C429268E0752001EBBAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A992C427268E074D001EBBAB /* BandyerConfig.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A9A1A3EE24586E6A0077A3DD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6D3A43042899724F000A05FA /* CompletionSpy.swift */,
+				6D0E0F67289C133700D2F248 /* JSONDecodingTestsCase.swift */,
+				6D3A42EA28990FB4000A05FA /* NSString+PushTokenData.h */,
+				6D3A42EB28990FB4000A05FA /* NSString+PushTokenData.m */,
+				6D98D78E28983144008EEF02 /* TestHelpers.swift */,
+				6D98D785289825C2008EEF02 /* Unwrap.swift */,
+				6D3A42FB28996DE2000A05FA /* UserDetailsFixtureFactory.swift */,
+				6D98D78B28983112008EEF02 /* Weak.swift */,
+				6D0E0F6D289C188B00D2F248 /* BoolMatchers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A9A1A3F22458744E0077A3DD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A91AADCD2452E5AF007003AF /* BCPTestCase.h */,
+				A91AADC62452E5AF007003AF /* BCPTestCase.m */,
+				A992C404268DD33E001EBBAB /* BCPiOS12AndAboveTestCase.h */,
+				A992C405268DD33E001EBBAB /* BCPiOS12AndAboveTestCase.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A9C31AEE22C22D1100BC33D5 = {
+			isa = PBXGroup;
+			children = (
+				F9E62A832A544BEB00F34009 /* KaleyraVideoConfig.plist */,
+				62DD2611AEC250BFC5FD7619 /* Config */,
+				775E4F49F1451B193118C9D2 /* Frameworks */,
+				A9C31AFC22C22D1100BC33D5 /* Info.plist */,
+				F9FE387D29D1834100EC304C /* NativeBridge */,
+				23F87D898896910F1885862F /* Pods */,
+				A9C31AF922C22D1100BC33D5 /* Products */,
+				A992C429268E0752001EBBAB /* Resources */,
+				A9C31B1822C22DE900BC33D5 /* Source */,
+				A9638002234CCAE90050AAA7 /* Test */,
+				A924CC35243782B300AD3805 /* www */,
+			);
+			sourceTree = "<group>";
+		};
+		A9C31AF922C22D1100BC33D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9C31AF822C22D1100BC33D5 /* KaleyraVideoCordovaPlugin.framework */,
+				A9637FF5234CC8C20050AAA7 /* KaleyraVideoCordovaPluginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9C31B1822C22DE900BC33D5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6D1D72F0289A79410068E335 /* VideoNativePlugin.swift */,
+				F9114DF329CE019F00581AA3 /* CordovaEvents */,
+				F982D7972A389C4F00F83688 /* PluginInfo */,
+			);
+			name = Source;
+			path = src/ios;
+			sourceTree = "<group>";
+		};
+		F9114DF329CE019F00581AA3 /* CordovaEvents */ = {
+			isa = PBXGroup;
+			children = (
+				6D98D779289818B3008EEF02 /* CordovaEventEmitter.swift */,
+			);
+			path = CordovaEvents;
+			sourceTree = "<group>";
+		};
+		F94C2D7D2A52FB1E004A9205 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DB82A52FB1E004A9205 /* Abstractions */,
+				F94C2D892A52FB1E004A9205 /* AccessToken */,
+				F94C2DC72A52FB1E004A9205 /* Broadcast */,
+				F94C2DB32A52FB1E004A9205 /* Concurrency */,
+				F94C2D8E2A52FB1E004A9205 /* DTOs */,
+				F94C2DBB2A52FB1E004A9205 /* Events */,
+				F94C2D8C2A52FB1E004A9205 /* Extensions */,
+				F94C2DD12A52FB1E004A9205 /* KaleyraVideoHybridNativeBridge.h */,
+				F94C2D862A52FB1E004A9205 /* NativeHybridBridge */,
+				F94C2D7E2A52FB1E004A9205 /* UI */,
+				F94C2DC92A52FB1E004A9205 /* User Details */,
+			);
+			name = Source;
+			path = "native-bridge/iOS/Source";
+			sourceTree = "<group>";
+		};
+		F94C2D7E2A52FB1E004A9205 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2D852A52FB1E004A9205 /* KaleyraVideoSDKUserInterfacePresenter.swift */,
+				F94C2D812A52FB1E004A9205 /* Presenters */,
+				F94C2D802A52FB1E004A9205 /* UserInterfacePresenter.swift */,
+				F94C2D7F2A52FB1E004A9205 /* UserInterfacePresenter+MainQueueRelay.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F94C2D812A52FB1E004A9205 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2D822A52FB1E004A9205 /* PresentingViewControllerViewControllerPresenter.swift */,
+				F94C2D832A52FB1E004A9205 /* ViewControllerPresenter.swift */,
+				F94C2D842A52FB1E004A9205 /* WindowViewControllerPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		F94C2D862A52FB1E004A9205 /* NativeHybridBridge */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2D882A52FB1E004A9205 /* VideoHybridNativeBridge.swift */,
+				F94C2D872A52FB1E004A9205 /* VideoHybridNativeBridgeError.swift */,
+			);
+			path = NativeHybridBridge;
+			sourceTree = "<group>";
+		};
+		F94C2D892A52FB1E004A9205 /* AccessToken */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2D8A2A52FB1E004A9205 /* AccessTokenRequester.swift */,
+				F94C2D8B2A52FB1E004A9205 /* TokenProvider.swift */,
+			);
+			path = AccessToken;
+			sourceTree = "<group>";
+		};
+		F94C2D8C2A52FB1E004A9205 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2D8D2A52FB1E004A9205 /* URL+FromString.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F94C2D8E2A52FB1E004A9205 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DA42A52FB1E004A9205 /* AccessTokenRequest+Encodable.swift */,
+				F94C2DA32A52FB1E004A9205 /* AccessTokenResponse+Decodable.swift */,
+				F94C2DAC2A52FB1E004A9205 /* Array+JSON.swift */,
+				F94C2DA12A52FB1E004A9205 /* AudioCallOptions+Bandyer.swift */,
+				F94C2D9E2A52FB1E004A9205 /* AudioCallOptions+Decodable.swift */,
+				F94C2DAE2A52FB1E004A9205 /* AudioCallOptions+Equatable.swift */,
+				F94C2D9C2A52FB1E004A9205 /* AudioCallType+Bandyer.swift */,
+				F94C2DB02A52FB1E004A9205 /* AudioCallType+Decodable.swift */,
+				F94C2D952A52FB1E004A9205 /* CallKitConfiguration+Decodable.swift */,
+				F94C2DAA2A52FB1E004A9205 /* CallOptions+Bandyer.swift */,
+				F94C2D922A52FB1E004A9205 /* CallOptions+Decodable.swift */,
+				F94C2DA02A52FB1E004A9205 /* CallOptions+Equatable.swift */,
+				F94C2D902A52FB1E004A9205 /* CallType+Bandyer.swift */,
+				F94C2D942A52FB1E004A9205 /* CallType+Decodable.swift */,
+				F94C2D9F2A52FB1E004A9205 /* ChatToolConfiguration+Decodable.swift */,
+				F94C2D932A52FB1E004A9205 /* CreateCallOptions+Decodable.swift */,
+				F94C2DA22A52FB1E004A9205 /* CreateCallOptions+Equatable.swift */,
+				F94C2D9D2A52FB1E004A9205 /* CreateCallOptions+Intent.swift */,
+				F94C2D8F2A52FB1E004A9205 /* DTOs.swift */,
+				F94C2D972A52FB1E004A9205 /* Environment+Bandyer.swift */,
+				F94C2D962A52FB1E004A9205 /* Environment+Decodable.swift */,
+				F94C2D992A52FB1E004A9205 /* IosConfiguration+Decodable.swift */,
+				F94C2D9B2A52FB1E004A9205 /* JSONDecodable.swift */,
+				F94C2DA82A52FB1E004A9205 /* KaleyraVideoConfiguration+Bandyer.swift */,
+				F94C2D982A52FB1E004A9205 /* KaleyraVideoConfiguration+Decodable.swift */,
+				F94C2DAF2A52FB1E004A9205 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift */,
+				F94C2DA62A52FB1E004A9205 /* RecordingType+Bandyer.swift */,
+				F94C2DB22A52FB1E004A9205 /* RecordingType+Decodable.swift */,
+				F94C2D912A52FB1E004A9205 /* Region+Bandyer.swift */,
+				F94C2DA92A52FB1E004A9205 /* Region+Decodable.swift */,
+				F94C2DAD2A52FB1E004A9205 /* ScreenShareToolConfiguration+Decodable.swift */,
+				F94C2DAB2A52FB1E004A9205 /* Tools+Decodable.swift */,
+				F94C2DB12A52FB1E004A9205 /* UserDetails+Bandyer.swift */,
+				F94C2DA52A52FB1E004A9205 /* UserDetails+Decodable.swift */,
+				F94C2DA72A52FB1E004A9205 /* UserDetailsFormat+Decodable.swift */,
+				F94C2D9A2A52FB1E004A9205 /* VoipHandlingStrategy+Decodable.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		F94C2DB32A52FB1E004A9205 /* Concurrency */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DB62A52FB1E004A9205 /* DispatchQueue+isMain.swift */,
+				F94C2DB52A52FB1E004A9205 /* Lock.swift */,
+				F94C2DB42A52FB1E004A9205 /* MainQueueDispatcher.swift */,
+				F94C2DB72A52FB1E004A9205 /* MainQueueRelay.swift */,
+			);
+			path = Concurrency;
+			sourceTree = "<group>";
+		};
+		F94C2DB82A52FB1E004A9205 /* Abstractions */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DBA2A52FB1E004A9205 /* BandyerSDKProtocol.swift */,
+				F94C2DB92A52FB1E004A9205 /* CallWindowProtocol.swift */,
+			);
+			path = Abstractions;
+			sourceTree = "<group>";
+		};
+		F94C2DBB2A52FB1E004A9205 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DBC2A52FB1E004A9205 /* Emitter */,
+				F94C2DC02A52FB1E004A9205 /* Events.swift */,
+				F94C2DBF2A52FB1E004A9205 /* Events+CaseIterable.swift */,
+				F94C2DBE2A52FB1E004A9205 /* Events+Description.swift */,
+				F94C2DC12A52FB1E004A9205 /* Reporters */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		F94C2DBC2A52FB1E004A9205 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DBD2A52FB1E004A9205 /* EventEmitter.swift */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
+		F94C2DC12A52FB1E004A9205 /* Reporters */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DC52A52FB1E004A9205 /* CallClientEventsReporter.swift */,
+				F94C2DC42A52FB1E004A9205 /* ChatClientEventsReporter.swift */,
+				F94C2DC62A52FB1E004A9205 /* ClientState.swift */,
+				F94C2DC22A52FB1E004A9205 /* EventsReporter.swift */,
+				F94C2DC32A52FB1E004A9205 /* PushTokenEventsReporter.swift */,
+			);
+			path = Reporters;
+			sourceTree = "<group>";
+		};
+		F94C2DC72A52FB1E004A9205 /* Broadcast */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DC82A52FB1E004A9205 /* BroadcastConfigurationPlistReader.swift */,
+			);
+			path = Broadcast;
+			sourceTree = "<group>";
+		};
+		F94C2DC92A52FB1E004A9205 /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DCA2A52FB1E004A9205 /* Cache */,
+				F94C2DCE2A52FB1E004A9205 /* Formatter */,
+				F94C2DCC2A52FB1E004A9205 /* Providers */,
+			);
+			path = "User Details";
+			sourceTree = "<group>";
+		};
+		F94C2DCA2A52FB1E004A9205 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DCB2A52FB1E004A9205 /* UsersDetailsCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		F94C2DCC2A52FB1E004A9205 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DCD2A52FB1E004A9205 /* UsersDetailsProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		F94C2DCE2A52FB1E004A9205 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2DCF2A52FB1E004A9205 /* FormatterProxy.swift */,
+				F94C2DD02A52FB1E004A9205 /* UserDetailsFormatter.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		F982D7972A389C4F00F83688 /* PluginInfo */ = {
+			isa = PBXGroup;
+			children = (
+				F982D7982A389C7500F83688 /* _KaleyraVideoHybridVersionInfo.swift */,
+			);
+			path = PluginInfo;
+			sourceTree = "<group>";
+		};
+		F982D79A2A389C8500F83688 /* PluginInfo */ = {
+			isa = PBXGroup;
+			children = (
+				F982D79B2A389CA200F83688 /* _KaleyraVideoHybridVersionInfoTests.swift */,
+			);
+			path = PluginInfo;
+			sourceTree = "<group>";
+		};
+		F9FE387C29D1822E00EC304C /* CordovaEvents */ = {
+			isa = PBXGroup;
+			children = (
+				6D98D775289813B9008EEF02 /* CordovaEventEmitterTests.swift */,
+			);
+			path = CordovaEvents;
+			sourceTree = "<group>";
+		};
+		F9FE387D29D1834100EC304C /* NativeBridge */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2D7D2A52FB1E004A9205 /* Source */,
+			);
+			name = NativeBridge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A9C31AF322C22D1100BC33D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F94C2E152A52FB1E004A9205 /* KaleyraVideoHybridNativeBridge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A9637FF4234CC8C20050AAA7 /* KaleyraVideoCordovaPluginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9637FFF234CC8C20050AAA7 /* Build configuration list for PBXNativeTarget "KaleyraVideoCordovaPluginTests" */;
+			buildPhases = (
+				92C4FD1642B2A0C8A8792D25 /* [CP] Check Pods Manifest.lock */,
+				A9637FF1234CC8C20050AAA7 /* Sources */,
+				A9637FF2234CC8C20050AAA7 /* Frameworks */,
+				A9637FF3234CC8C20050AAA7 /* Resources */,
+				2D858A7C750CEAAFB510FD89 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9637FFC234CC8C20050AAA7 /* PBXTargetDependency */,
+			);
+			name = KaleyraVideoCordovaPluginTests;
+			productName = "Bandyer-Cordova-PluginTests";
+			productReference = A9637FF5234CC8C20050AAA7 /* KaleyraVideoCordovaPluginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A9C31AF722C22D1100BC33D5 /* KaleyraVideoCordovaPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9C31B0022C22D1100BC33D5 /* Build configuration list for PBXNativeTarget "KaleyraVideoCordovaPlugin" */;
+			buildPhases = (
+				3F0747749BE04A632863EF6D /* [CP] Check Pods Manifest.lock */,
+				A9C31AF322C22D1100BC33D5 /* Headers */,
+				A9C31AF422C22D1100BC33D5 /* Sources */,
+				A9C31AF522C22D1100BC33D5 /* Frameworks */,
+				A9C31AF622C22D1100BC33D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KaleyraVideoCordovaPlugin;
+			productName = "Bandyer-Cordova-Plugin";
+			productReference = A9C31AF822C22D1100BC33D5 /* KaleyraVideoCordovaPlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9C31AEF22C22D1100BC33D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BCP;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Kaleyra S.p.a.";
+				TargetAttributes = {
+					A9637FF4234CC8C20050AAA7 = {
+						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1340;
+					};
+					A9C31AF722C22D1100BC33D5 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = A9C31AF222C22D1100BC33D5 /* Build configuration list for PBXProject "KaleyraVideoCordovaPlugin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A9C31AEE22C22D1100BC33D5;
+			productRefGroup = A9C31AF922C22D1100BC33D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9C31AF722C22D1100BC33D5 /* KaleyraVideoCordovaPlugin */,
+				A9637FF4234CC8C20050AAA7 /* KaleyraVideoCordovaPluginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9637FF3234CC8C20050AAA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A992C416268DEB10001EBBAB /* missing_extension_identifier.plist in Resources */,
+				A92CD25726A6B093001A3E04 /* not_available_group_identifier.plist in Resources */,
+				A992C41C268DEDB9001EBBAB /* mismatched_extension_identifier.plist in Resources */,
+				A92CD25926A6B0DA001A3E04 /* not_available_extension_identifier.plist in Resources */,
+				A992C41A268DED46001EBBAB /* mismatched_group.plist in Resources */,
+				A992C40E268DD6E0001EBBAB /* text.txt in Resources */,
+				A992C410268DD8BD001EBBAB /* valid_config.plist in Resources */,
+				A92581A3268E0E0500FD4202 /* empty_extension_identifier.plist in Resources */,
+				A992C418268DEBCB001EBBAB /* missing_broadcast.plist in Resources */,
+				A92581A1268E0D8900FD4202 /* empty_group.plist in Resources */,
+				A992C414268DEA79001EBBAB /* missing_group.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C31AF622C22D1100BC33D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E62A842A544BEB00F34009 /* KaleyraVideoConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D858A7C750CEAAFB510FD89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaleyraVideoCordovaPluginTests/Pods-KaleyraVideoCordovaPluginTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaleyraVideoCordovaPluginTests/Pods-KaleyraVideoCordovaPluginTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaleyraVideoCordovaPluginTests/Pods-KaleyraVideoCordovaPluginTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F0747749BE04A632863EF6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaleyraVideoCordovaPlugin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92C4FD1642B2A0C8A8792D25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaleyraVideoCordovaPluginTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9637FF1234CC8C20050AAA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D98D786289825C2008EEF02 /* Unwrap.swift in Sources */,
+				6D0E0F6E289C188B00D2F248 /* BoolMatchers.swift in Sources */,
+				6D98D776289813B9008EEF02 /* CordovaEventEmitterTests.swift in Sources */,
+				6D98D79728983586008EEF02 /* ChatClientStub.swift in Sources */,
+				A992C406268DD33E001EBBAB /* BCPiOS12AndAboveTestCase.m in Sources */,
+				6D3A42EC28990FB4000A05FA /* NSString+PushTokenData.m in Sources */,
+				6D98D78D2898312E008EEF02 /* Weak.swift in Sources */,
+				A91AADD62452E5AF007003AF /* BCPTestCase.m in Sources */,
+				6D98D78A289830F2008EEF02 /* CallClientStub.swift in Sources */,
+				6D98D7842898257A008EEF02 /* CommandDelegateSpy.swift in Sources */,
+				6D3A43052899724F000A05FA /* CompletionSpy.swift in Sources */,
+				6D0E0F68289C133700D2F248 /* JSONDecodingTestsCase.swift in Sources */,
+				F982D79C2A389CA200F83688 /* _KaleyraVideoHybridVersionInfoTests.swift in Sources */,
+				6D98D78F28983144008EEF02 /* TestHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C31AF422C22D1100BC33D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F94C2E092A52FB1E004A9205 /* Events+CaseIterable.swift in Sources */,
+				F94C2DDA2A52FB1E004A9205 /* AccessTokenRequester.swift in Sources */,
+				F94C2E112A52FB1E004A9205 /* UsersDetailsCache.swift in Sources */,
+				F94C2DFA2A52FB1E004A9205 /* Array+JSON.swift in Sources */,
+				F94C2DE52A52FB1E004A9205 /* Environment+Bandyer.swift in Sources */,
+				F94C2DE42A52FB1E004A9205 /* Environment+Decodable.swift in Sources */,
+				F94C2DFB2A52FB1E004A9205 /* ScreenShareToolConfiguration+Decodable.swift in Sources */,
+				F94C2DF72A52FB1E004A9205 /* Region+Decodable.swift in Sources */,
+				F94C2DE62A52FB1E004A9205 /* KaleyraVideoConfiguration+Decodable.swift in Sources */,
+				F94C2E0E2A52FB1E004A9205 /* CallClientEventsReporter.swift in Sources */,
+				6D3A42FC28996DE2000A05FA /* UserDetailsFixtureFactory.swift in Sources */,
+				F94C2DD92A52FB1E004A9205 /* VideoHybridNativeBridge.swift in Sources */,
+				F94C2DD62A52FB1E004A9205 /* WindowViewControllerPresenter.swift in Sources */,
+				F94C2DD42A52FB1E004A9205 /* PresentingViewControllerViewControllerPresenter.swift in Sources */,
+				F94C2DD32A52FB1E004A9205 /* UserInterfacePresenter.swift in Sources */,
+				F94C2DEF2A52FB1E004A9205 /* AudioCallOptions+Bandyer.swift in Sources */,
+				F94C2DE12A52FB1E004A9205 /* CreateCallOptions+Decodable.swift in Sources */,
+				F94C2DF32A52FB1E004A9205 /* UserDetails+Decodable.swift in Sources */,
+				6D98D77A289818B3008EEF02 /* CordovaEventEmitter.swift in Sources */,
+				F94C2E142A52FB1E004A9205 /* UserDetailsFormatter.swift in Sources */,
+				F94C2DE22A52FB1E004A9205 /* CallType+Decodable.swift in Sources */,
+				F94C2E0A2A52FB1E004A9205 /* Events.swift in Sources */,
+				F94C2DDE2A52FB1E004A9205 /* CallType+Bandyer.swift in Sources */,
+				F94C2DF22A52FB1E004A9205 /* AccessTokenRequest+Encodable.swift in Sources */,
+				6D1D72F1289A79410068E335 /* VideoNativePlugin.swift in Sources */,
+				F94C2DF82A52FB1E004A9205 /* CallOptions+Bandyer.swift in Sources */,
+				F94C2DE72A52FB1E004A9205 /* IosConfiguration+Decodable.swift in Sources */,
+				F94C2DE32A52FB1E004A9205 /* CallKitConfiguration+Decodable.swift in Sources */,
+				F94C2DDF2A52FB1E004A9205 /* Region+Bandyer.swift in Sources */,
+				F94C2E032A52FB1E004A9205 /* DispatchQueue+isMain.swift in Sources */,
+				F94C2DD22A52FB1E004A9205 /* UserInterfacePresenter+MainQueueRelay.swift in Sources */,
+				F94C2DDC2A52FB1E004A9205 /* URL+FromString.swift in Sources */,
+				F982D7992A389C7500F83688 /* _KaleyraVideoHybridVersionInfo.swift in Sources */,
+				F94C2E082A52FB1E004A9205 /* Events+Description.swift in Sources */,
+				F94C2DED2A52FB1E004A9205 /* ChatToolConfiguration+Decodable.swift in Sources */,
+				F94C2E0D2A52FB1E004A9205 /* ChatClientEventsReporter.swift in Sources */,
+				F94C2DEC2A52FB1E004A9205 /* AudioCallOptions+Decodable.swift in Sources */,
+				F94C2E042A52FB1E004A9205 /* MainQueueRelay.swift in Sources */,
+				F94C2DEB2A52FB1E004A9205 /* CreateCallOptions+Intent.swift in Sources */,
+				F94C2E122A52FB1E004A9205 /* UsersDetailsProvider.swift in Sources */,
+				F94C2DEE2A52FB1E004A9205 /* CallOptions+Equatable.swift in Sources */,
+				F94C2DEA2A52FB1E004A9205 /* AudioCallType+Bandyer.swift in Sources */,
+				F94C2DD82A52FB1E004A9205 /* VideoHybridNativeBridgeError.swift in Sources */,
+				F94C2E0F2A52FB1E004A9205 /* ClientState.swift in Sources */,
+				F94C2DFF2A52FB1E004A9205 /* UserDetails+Bandyer.swift in Sources */,
+				F94C2E102A52FB1E004A9205 /* BroadcastConfigurationPlistReader.swift in Sources */,
+				F94C2E132A52FB1E004A9205 /* FormatterProxy.swift in Sources */,
+				F94C2E0B2A52FB1E004A9205 /* EventsReporter.swift in Sources */,
+				F94C2E022A52FB1E004A9205 /* Lock.swift in Sources */,
+				F94C2DF92A52FB1E004A9205 /* Tools+Decodable.swift in Sources */,
+				F94C2DE02A52FB1E004A9205 /* CallOptions+Decodable.swift in Sources */,
+				F94C2DD72A52FB1E004A9205 /* KaleyraVideoSDKUserInterfacePresenter.swift in Sources */,
+				F94C2DF62A52FB1E004A9205 /* KaleyraVideoConfiguration+Bandyer.swift in Sources */,
+				F94C2DE92A52FB1E004A9205 /* JSONDecodable.swift in Sources */,
+				F94C2DF52A52FB1E004A9205 /* UserDetailsFormat+Decodable.swift in Sources */,
+				F94C2DFC2A52FB1E004A9205 /* AudioCallOptions+Equatable.swift in Sources */,
+				F94C2DF12A52FB1E004A9205 /* AccessTokenResponse+Decodable.swift in Sources */,
+				F94C2E062A52FB1E004A9205 /* BandyerSDKProtocol.swift in Sources */,
+				F94C2DFE2A52FB1E004A9205 /* AudioCallType+Decodable.swift in Sources */,
+				F94C2DFD2A52FB1E004A9205 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift in Sources */,
+				F94C2DDB2A52FB1E004A9205 /* TokenProvider.swift in Sources */,
+				F94C2E002A52FB1E004A9205 /* RecordingType+Decodable.swift in Sources */,
+				F94C2E052A52FB1E004A9205 /* CallWindowProtocol.swift in Sources */,
+				F94C2DD52A52FB1E004A9205 /* ViewControllerPresenter.swift in Sources */,
+				F94C2E0C2A52FB1E004A9205 /* PushTokenEventsReporter.swift in Sources */,
+				F94C2DE82A52FB1E004A9205 /* VoipHandlingStrategy+Decodable.swift in Sources */,
+				F94C2DDD2A52FB1E004A9205 /* DTOs.swift in Sources */,
+				F94C2E012A52FB1E004A9205 /* MainQueueDispatcher.swift in Sources */,
+				F94C2E072A52FB1E004A9205 /* EventEmitter.swift in Sources */,
+				F94C2DF02A52FB1E004A9205 /* CreateCallOptions+Equatable.swift in Sources */,
+				F94C2DF42A52FB1E004A9205 /* RecordingType+Bandyer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9637FFC234CC8C20050AAA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9C31AF722C22D1100BC33D5 /* KaleyraVideoCordovaPlugin */;
+			targetProxy = A9637FFB234CC8C20050AAA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A9637FFD234CC8C20050AAA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCFBB42363F7DA9A41661B2E /* Pods-KaleyraVideoCordovaPluginTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OCHamcrest\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OCMockito\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OCHamcrest/OCHamcrest.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OCMockito/OCMockito.framework/Headers\"",
+				);
+				INFOPLIST_FILE = "test/ios/Unit Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "it.bandyer.Bandyer-Cordova-PluginTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test/ios/Unit Tests/Bandyer-Cordova-PluginTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9637FFE234CC8C20050AAA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66935AEBFDEAE4A278CBB9D1 /* Pods-KaleyraVideoCordovaPluginTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OCHamcrest\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OCMockito\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OCHamcrest/OCHamcrest.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OCMockito/OCMockito.framework/Headers\"",
+				);
+				INFOPLIST_FILE = "test/ios/Unit Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "it.bandyer.Bandyer-Cordova-PluginTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test/ios/Unit Tests/Bandyer-Cordova-PluginTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A9C31AFE22C22D1100BC33D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9C31AFF22C22D1100BC33D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9C31B0122C22D1100BC33D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B0F558A63EE2D3C88D4A233 /* Pods-KaleyraVideoCordovaPlugin.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bandyer.Bandyer-Cordova-Plugin";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9C31B0222C22D1100BC33D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 421B84A541F4F6F720D2A9AE /* Pods-KaleyraVideoCordovaPlugin.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bandyer.Bandyer-Cordova-Plugin";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9637FFF234CC8C20050AAA7 /* Build configuration list for PBXNativeTarget "KaleyraVideoCordovaPluginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9637FFD234CC8C20050AAA7 /* Debug */,
+				A9637FFE234CC8C20050AAA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9C31AF222C22D1100BC33D5 /* Build configuration list for PBXProject "KaleyraVideoCordovaPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C31AFE22C22D1100BC33D5 /* Debug */,
+				A9C31AFF22C22D1100BC33D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9C31B0022C22D1100BC33D5 /* Build configuration list for PBXNativeTarget "KaleyraVideoCordovaPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C31B0122C22D1100BC33D5 /* Debug */,
+				A9C31B0222C22D1100BC33D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9C31AEF22C22D1100BC33D5 /* Project object */;
+}

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="@kaleyra/video-cordova-plugin" version="0.10.1">
+    <name>Kaleyra Video Cordova Plugin</name>
+    <author>Kaleyra S.p.a.</author>
+    <description>This plugin allows you to add Kaleyra Video SDK to your application using Kaleyra Video SDK Native libraries
+    </description>
+    <keywords>kaleyra, sdk, voice call, phone call, group call, chat, collaboration, screen sharing,
+        file sharing, kaleyra, kaleyra video
+    </keywords>
+    <license>GNU LESSER GENERAL PUBLIC LICENSE Version 3</license>
+
+    <js-module name="KaleyraVideo" src="www/out/kaleyra-video.min.js">
+        <clobbers target="KaleyraVideo" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=9.0.0" />
+        <engine name="cordova-ios" version=">=6.0.0" />
+        <engine name="apple-ios" version=">=10.0.0" />
+    </engines>
+
+    <platform name="ios">
+        <preference name="IOS_APP_GROUP_IDENTIFIER" default="NOT_AVAILABLE" />
+        <preference name="IOS_EXTENSION_BUNDLE_ID" default="NOT_AVAILABLE" />
+
+        <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
+            <string>Necessaria per l'utilizzo della libreria</string>
+        </config-file>
+        <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
+            <string>Necessaria per l'utilizzo della libreria</string>
+        </config-file>
+        <config-file parent="/*" target="config.xml">
+            <feature name="VideoNativePlugin">
+                <param name="ios-package" value="KCPVideoNativePlugin" />
+            </feature>
+        </config-file>
+
+        <config-file parent="broadcast" target="*/KaleyraVideoConfig.plist">
+            <dict>
+                <key>appGroupIdentifier</key>
+                <string>$IOS_APP_GROUP_IDENTIFIER</string>
+                <key>extensionBundleIdentifier</key>
+                <string>$IOS_EXTENSION_BUNDLE_ID</string>
+            </dict>
+        </config-file>
+
+        <resource-file src="res/ios/KaleyraVideoConfig.plist" />
+
+        <source-file src="src/ios/VideoNativePlugin.swift" />
+        <source-file src="src/ios/CordovaEvents/CordovaEventEmitter.swift" />
+        <source-file src="src/ios/PluginInfo/_KaleyraVideoHybridVersionInfo.swift" />
+
+        <source-file src="native-bridge/iOS/Source/Abstractions/BandyerSDKProtocol.swift" />
+        <source-file src="native-bridge/iOS/Source/Abstractions/CallWindowProtocol.swift" />
+
+        <source-file src="native-bridge/iOS/Source/AccessToken/AccessTokenRequester.swift" />
+        <source-file src="native-bridge/iOS/Source/AccessToken/TokenProvider.swift" />
+
+        <source-file src="native-bridge/iOS/Source/Broadcast/BroadcastConfigurationPlistReader.swift" />
+
+        <source-file src="native-bridge/iOS/Source/Concurrency/DispatchQueue+isMain.swift" />
+        <source-file src="native-bridge/iOS/Source/Concurrency/Lock.swift" />
+        <source-file src="native-bridge/iOS/Source/Concurrency/MainQueueDispatcher.swift" />
+        <source-file src="native-bridge/iOS/Source/Concurrency/MainQueueRelay.swift" />
+
+        <source-file src="native-bridge/iOS/Source/DTOs/AccessTokenRequest+Encodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/AccessTokenResponse+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/Array+JSON.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/AudioCallOptions+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/AudioCallOptions+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/AudioCallOptions+Equatable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/AudioCallType+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/AudioCallType+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CallKitConfiguration+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CallOptions+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CallOptions+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CallOptions+Equatable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CallType+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CallType+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/ChatToolConfiguration+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CreateCallOptions+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CreateCallOptions+Equatable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/CreateCallOptions+Intent.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/DTOs.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/Environment+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/Environment+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/IosConfiguration+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/JSONDecodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/KaleyraVideoConfiguration+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/KaleyraVideoConfiguration+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/RecordingType+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/RecordingType+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/Region+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/Region+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/ScreenShareToolConfiguration+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/Tools+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/UserDetails+Bandyer.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/UserDetails+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/UserDetailsFormat+Decodable.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/VoipHandlingStrategy+Decodable.swift" />
+
+        <source-file src="native-bridge/iOS/Source/Events/Emitter/EventEmitter.swift" />
+
+        <source-file src="native-bridge/iOS/Source/Events/Events.swift" />
+        <source-file src="native-bridge/iOS/Source/Events/Events+CaseIterable.swift" />
+        <source-file src="native-bridge/iOS/Source/Events/Events+Description.swift" />
+
+        <source-file src="native-bridge/iOS/Source/Events/Reporters/CallClientEventsReporter.swift" />
+        <source-file src="native-bridge/iOS/Source/Events/Reporters/ChatClientEventsReporter.swift" />
+        <source-file src="native-bridge/iOS/Source/Events/Reporters/ClientState.swift" />
+        <source-file src="native-bridge/iOS/Source/Events/Reporters/EventsReporter.swift" />
+        <source-file src="native-bridge/iOS/Source/Events/Reporters/PushTokenEventsReporter.swift" />
+
+        <source-file src="native-bridge/iOS/Source/Extensions/URL+FromString.swift" />
+
+        <source-file src="native-bridge/iOS/Source/NativeHybridBridge/VideoHybridNativeBridge.swift" />
+        <source-file src="native-bridge/iOS/Source/NativeHybridBridge/VideoHybridNativeBridgeError.swift" />
+
+        <source-file src="native-bridge/iOS/Source/UI/KaleyraVideoSDKUserInterfacePresenter.swift" />
+        <source-file src="native-bridge/iOS/Source/UI/UserInterfacePresenter.swift" />
+        <source-file src="native-bridge/iOS/Source/UI/UserInterfacePresenter+MainQueueRelay.swift" />
+
+        <source-file src="native-bridge/iOS/Source/UI/Presenters/PresentingViewControllerViewControllerPresenter.swift" />
+        <source-file src="native-bridge/iOS/Source/UI/Presenters/ViewControllerPresenter.swift" />
+        <source-file src="native-bridge/iOS/Source/UI/Presenters/WindowViewControllerPresenter.swift" />
+
+        <source-file src="native-bridge/iOS/Source/User Details/Cache/UsersDetailsCache.swift" />
+
+        <source-file src="native-bridge/iOS/Source/User Details/Formatter/FormatterProxy.swift" />
+        <source-file src="native-bridge/iOS/Source/User Details/Formatter/UserDetailsFormatter.swift" />
+
+        <source-file src="native-bridge/iOS/Source/User Details/Providers/UsersDetailsProvider.swift" />
+
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/" />
+            </config>
+            <pods use-frameworks="true">
+                <pod name="Bandyer" spec="~> 3.6.3" />
+            </pods>
+        </podspec>
+        <dependency id="cordova-plugin-device" url="https://github.com/apache/cordova-plugin-device" />
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2" />
+    </platform>
+
+    <platform name="android" kotlin="1.5.32">
+        <apply-plugin>kotlin-kapt</apply-plugin>
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="VideoNativePlugin">
+                <param name="android-package" value="com.kaleyra.video_cordova_plugin.VideoNativePlugin" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <receiver android:name="com.kaleyra.video_hybrid_native_bridge.notifications.KaleyraVideoNotificationReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
+                <intent-filter android:priority="999">
+                    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                    <category android:name="$PACKAGE_NAME" />
+                </intent-filter>
+            </receiver>
+        </config-file>
+
+        <source-file src="src/android/src/main/java/com/kaleyra/video_cordova_plugin" target-dir="java/com/kaleyra/video_cordova_plugin" />
+        <source-file src="native-bridge/android/src/main/java/com/kaleyra/video_hybrid_native_bridge" target-dir="java/com/kaleyra" />
+        <resource-file src="src/android/src/main/assets/kaleyra_video_wrapper_info.txt" target="assets/kaleyra_video_wrapper_info.txt" />
+
+        <framework custom="true" src="native-bridge/android/build.gradle" type="gradleReference" />
+        <framework custom="true" src="src/android/cordova.gradle" type="gradleReference" />
+
+        <dependency id="cordova-support-kotlin" url="https://github.com/kainonly/cordova-support-kotlin.git" />
+        <dependency id="cordova-plugin-device" url="https://github.com/apache/cordova-plugin-device" />
+    </platform>
+</plugin>
