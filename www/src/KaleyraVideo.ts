@@ -252,7 +252,7 @@ export default class KaleyraVideo extends EventListener {
             throw new IllegalArgumentError("Invalid url!");
         }
 
-        cordova.exec(null, null, "VideoNativePlugin", "startCallUrl", [url]);
+        cordova.exec(null, null, "VideoNativePlugin", "startCallUrl", [JSON.stringify(url)]);
     }
 
     // noinspection JSMethodCanBeStatic

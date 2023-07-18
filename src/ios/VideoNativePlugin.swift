@@ -139,16 +139,19 @@ class VideoNativePlugin: CDVPlugin {
     func startCall(_ command: CDVInvokedUrlCommand) {
         performer(for: command).perform {
             let string = try unwrap(command.arguments.first as? String)
-
-            if let url = URL(string: string) {
-                try plugin.startCallUrl(url)
-
-            } else {
-                let options = try CreateCallOptions.decodeJSON(string)
-                try plugin.startCall(options)
-            }
+            let options = try CreateCallOptions.decodeJSON(string)
+            try plugin.startCall(options)
         }
     }
+
+   @objc
+   func startCallUrl(_ command: CDVInvokedUrlCommand) {
+       performer(for: command).perform {
+           let string = try unwrap(command.arguments.first as? String)
+           let url = try URL.fromString(string)
+           try plugin.startCallUrl(url)
+       }
+   }
 
     // MARK: - Start chat
 
