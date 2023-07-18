@@ -35,6 +35,9 @@ class VideoNativePlugin : CordovaPlugin() {
             .maxByOrNull { it.parameters.size }
             ?.let { function ->
                 when {
+                    params.length() == 0 -> {
+                        function.call(this)
+                    }
                     params.length() == 1 -> {
                         val arg = gson.fromJson<Any>(params.getString(0), function.parameters[1].type.javaType)
                         if (function.parameters.lastOrNull { it.type == CallbackContext::class.createType() } != null) function.call(this, arg, callbackContext)
