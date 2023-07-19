@@ -37,3 +37,14 @@ plugin.iml
 src/android/cordova-plugin-android.iml
 test/ios/
 example/
+native-bridge/iOS/Pods
+native-bridge/iOS/KaleyraVideoHybridNativeBridge.xcodeproj/**
+native-bridge/iOS/KaleyraVideoHybridNativeBridge.xcworkspace/**
+native-bridge/iOS/Tests/
+native-bridge/android/src/test/
+test/
+tests/
+.github/
+native-bridge/.github/workflows/ci.yml
+jest.config.js
+typedoc.json
