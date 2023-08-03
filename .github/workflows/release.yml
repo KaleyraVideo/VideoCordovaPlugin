@@ -39,4 +39,4 @@ jobs:
     - name: Publish to npm
       run: | 
         npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_API_KEY }}"
-        npm whoami
+        npm publish
