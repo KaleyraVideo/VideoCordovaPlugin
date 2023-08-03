@@ -17,7 +17,7 @@ jobs:
   release-plugin:
     runs-on: macos-latest
     environment:
-      name: test_environment
+      name: release_environment
 
     steps:
     - uses: actions/checkout@v2
@@ -28,13 +28,15 @@ jobs:
     - name: Install node packages
       run: npm ci
     
-    # - name: Update package version
-    #   run: npm run ${{ github.event.inputs.release_kind }}
+    - name: Update package version
+      run: npm run ${{ github.event.inputs.release_kind }}
       
     - name: Remove "private" constraint from package.json file
       run: |
         sed -i '' 's/\"private\": true/\"private\": false/g' package.json
         cat package.json
     
-    #- name: Publish to npm
-     # run: npm publish
+    - name: Publish to npm
+      run: | 
+        npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_API_KEY }}"
+        npm whoami
