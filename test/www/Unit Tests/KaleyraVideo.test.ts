@@ -1,7 +1,7 @@
 // Copyright © 2018-2023 Kaleyra S.p.a. All Rights Reserved.
 // See LICENSE for licensing information
 
-import BandyerPlugin from "../../../www/src/BandyerPlugin";
+import KaleyraVideo from "../../../www/src/KaleyraVideo";
 import {CordovaSpy} from "./CordovaSpy";
 import {DeviceStub} from "./DeviceStub";
 import {Environments} from "../../../native-bridge/TypeScript/Environments";
@@ -10,7 +10,7 @@ import {CreateCallOptions} from "../../../native-bridge/TypeScript/types/CreateC
 import {CallType} from "../../../native-bridge/TypeScript/types/CallType";
 import {RecordingType} from "../../../native-bridge/TypeScript/types/RecordingType";
 import {CallDisplayMode} from "../../../native-bridge/TypeScript/types/CallDisplayMode";
-import {BandyerPluginConfiguration} from "../../../native-bridge/TypeScript/types/BandyerPluginConfiguration";
+import {KaleyraVideoConfiguration} from "../../../native-bridge/TypeScript/types/KaleyraVideoConfiguration";
 import {AudioCallType} from "../../../native-bridge/TypeScript/types/AudioCallType";
 
 let device: DeviceStub;
@@ -26,7 +26,7 @@ beforeEach(() => {
 afterEach(() => {
     globalThis.device = undefined;
     globalThis.cordova = undefined;
-    BandyerPlugin.instance = undefined;
+    KaleyraVideo.instance = undefined;
 });
 
 describe("Plugin setup", () => {
@@ -34,7 +34,7 @@ describe("Plugin setup", () => {
     test("Throws an invalid argument exception when appId parameter is missing", () => {
         const setup = () => {
             // @ts-ignore
-            BandyerPlugin.configure({
+            KaleyraVideo.configure({
                 environment: Environments.sandbox(),
                 region: Regions.europe(),
             });
@@ -47,13 +47,13 @@ describe("Plugin setup", () => {
         const setup = () => {
             const config = makePluginConfig();
             config.appID = "";
-            BandyerPlugin.configure(config);
+            KaleyraVideo.configure(config);
         };
 
         expect(setup).toThrowError(Error);
     });
 
-    test('Calls "configureBandyer" action with the argument provided in config parameter', () => {
+    test('Calls "configureBridge" action with the argument provided in config parameter', () => {
         const config = {
             appID: "mAppId_a21393y2a4ada1231",
             environment: Environments.sandbox(),
@@ -62,11 +62,11 @@ describe("Plugin setup", () => {
             tools: {
                 chat: {
                     audioCallOption: {
-                        type: BandyerPlugin.audioCallTypes.AUDIO,
-                        recordingType: BandyerPlugin.recordingTypes.NONE,
+                        type: KaleyraVideo.audioCallTypes.AUDIO,
+                        recordingType: KaleyraVideo.recordingTypes.NONE,
                     },
                     videoCallOption: {
-                        recordingType: BandyerPlugin.recordingTypes.NONE,
+                        recordingType: KaleyraVideo.recordingTypes.NONE,
                     },
                 },
                 fileShare: true,
@@ -85,13 +85,13 @@ describe("Plugin setup", () => {
             },
         };
 
-        BandyerPlugin.configure(config);
+        KaleyraVideo.configure(config);
 
         expect(cordovaSpy.execInvocations.length).toEqual(1);
 
         const invocation = cordovaSpy.execInvocations[0];
-        expect(invocation.service).toMatch("BandyerPlugin");
-        expect(invocation.action).toMatch("configureBandyer");
+        expect(invocation.service).toMatch("VideoNativePlugin");
+        expect(invocation.action).toMatch("configureBridge");
         expect(invocation.args).toBeDefined();
 
         const firstArg = JSON.parse(invocation.args[0]);
@@ -118,20 +118,20 @@ describe("Plugin setup", () => {
         expect(firstArg.tools.screenShare.wholeDevice).toEqual(true);
     });
 
-    test('When running on generic device, calls "configureBandyer" action with the mandatory only arguments provided in config parameter', () => {
+    test('When running on generic device, calls "configureBridge" action with the mandatory only arguments provided in config parameter', () => {
         const config = {
             appID: "mAppId_a21393y2a4ada1231",
             environment: Environments.sandbox(),
             region: Regions.europe(),
         };
 
-        BandyerPlugin.configure(config);
+        KaleyraVideo.configure(config);
 
         expect(cordovaSpy.execInvocations.length).toEqual(1);
 
         const invocation = cordovaSpy.execInvocations[0];
-        expect(invocation.service).toMatch("BandyerPlugin");
-        expect(invocation.action).toMatch("configureBandyer");
+        expect(invocation.service).toMatch("VideoNativePlugin");
+        expect(invocation.action).toMatch("configureBridge");
         expect(invocation.args).toBeDefined();
 
         const firstArg = JSON.parse(invocation.args[0]);
@@ -177,7 +177,7 @@ describe("Plugin connect", () => {
         expect(cordovaSpy.execInvocations.length).toEqual(2);
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("connect");
         expect(invocation.args).toBeDefined();
         expect(invocation.args).toContainEqual("usr_12345");
@@ -192,7 +192,7 @@ describe("Plugin disconnect", () => {
         sut.disconnect();
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("disconnect");
         expect(invocation.args).toEqual([]);
     });
@@ -206,7 +206,7 @@ describe("Plugin state", () => {
         sut.state();
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("state");
         expect(invocation.args).toEqual([]);
     });
@@ -271,7 +271,7 @@ describe("Starting a call", () => {
         sut.startCall(options);
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("startCall");
         expect(invocation.args).toHaveLength(1);
         const firstArg = JSON.parse(invocation.args[0]);
@@ -295,12 +295,12 @@ describe("Starting a call", () => {
     test("Call startCall action with the provided URL as argument", () => {
         const sut = makeSUT();
 
-        sut.startCallFrom("https://acme.bandyer.com/call/12345");
+        sut.startCallFrom("https://acme.kaleyra.com/call/12345");
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("startCall");
-        expect(invocation.args).toContainEqual("https://acme.bandyer.com/call/12345");
+        expect(invocation.args).toContainEqual(JSON.stringify("https://acme.kaleyra.com/call/12345"));
     });
 });
 
@@ -313,7 +313,7 @@ describe("In call user verification", () => {
         sut.verifyCurrentCall(true);
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("verifyCurrentCall");
         const firstArg = JSON.parse(invocation.args[0]);
         expect(firstArg).toEqual(true);
@@ -329,7 +329,7 @@ describe("Call display mode", () => {
         sut.setDisplayModeForCurrentCall(CallDisplayMode.FOREGROUND_PICTURE_IN_PICTURE);
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("setDisplayModeForCurrentCall");
         const firstArg = JSON.parse(invocation.args[0]);
         expect(firstArg).toEqual("FOREGROUND_PICTURE_IN_PICTURE");
@@ -358,7 +358,7 @@ describe("User details", () => {
         sut.addUsersDetails(userDetails);
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("addUsersDetails");
         const firstArg = JSON.parse(invocation.args[0]);
         expect(firstArg).toEqual(
@@ -386,7 +386,7 @@ describe("User details", () => {
         sut.removeUsersDetails();
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("removeUsersDetails");
         expect(invocation.args).toHaveLength(0);
     });
@@ -475,7 +475,7 @@ describe("User details", () => {
         });
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("setUserDetailsFormat");
         const firstArg = JSON.parse(invocation.args[0]);
         expect(firstArg).toEqual({
@@ -491,7 +491,7 @@ describe("User details", () => {
         sut.clearUserCache();
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("clearUserCache");
         expect(invocation.args).toHaveLength(0);
     });
@@ -515,7 +515,7 @@ describe("Push notifications handling", () => {
         sut.handlePushNotificationPayload("Some push payload");
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("handlePushNotificationPayload");
         expect(invocation.args[0]).toEqual("Some push payload");
     });
@@ -539,17 +539,17 @@ describe("Starting a chat", () => {
         sut.startChat("bob");
 
         const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("BandyerPlugin");
+        expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("startChat");
         expect(invocation.args[0]).toEqual("bob");
     });
 });
 
 function makeSUT() {
-    return BandyerPlugin.configure(makePluginConfig());
+    return KaleyraVideo.configure(makePluginConfig());
 }
 
-function makePluginConfig(): BandyerPluginConfiguration {
+function makePluginConfig(): KaleyraVideoConfiguration {
     return {
         appID: "Some APP ID",
         environment: Environments.sandbox(),
