@@ -58,8 +58,9 @@
 
         <source-file src="native-bridge/iOS/Source/Broadcast/BroadcastConfigurationPlistReader.swift" />
 
+        <source-file src="native-bridge/iOS/Source/Concurrency/Atomic.swift" />
         <source-file src="native-bridge/iOS/Source/Concurrency/DispatchQueue+isMain.swift" />
-        <source-file src="native-bridge/iOS/Source/Concurrency/Lock.swift" />
+        <source-file src="native-bridge/iOS/Source/Concurrency/Locking.swift" />
         <source-file src="native-bridge/iOS/Source/Concurrency/MainQueueDispatcher.swift" />
         <source-file src="native-bridge/iOS/Source/Concurrency/MainQueueRelay.swift" />
 
