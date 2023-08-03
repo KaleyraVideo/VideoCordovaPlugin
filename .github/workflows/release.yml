@@ -1,0 +1,40 @@
+name: Release Plugin
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_kind:
+        type: choice
+        description: What kind of release do you want to do?
+        required: true
+        options: 
+        - 
+        - patch
+        - minor
+        - major
+
+jobs:
+  release-plugin:
+    runs-on: macos-latest
+    environment:
+      name: test_environment
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 16
+    
+    - name: Install node packages
+      run: npm ci
+    
+    # - name: Update package version
+    #   run: npm run ${{ github.event.inputs.release_kind }}
+      
+    - name: Remove "private" constraint from package.json file
+      run: |
+        sed -i '' 's/\"private\": true/\"private\": false/g' package.json
+        cat package.json
+    
+    #- name: Publish to npm
+     # run: npm publish
