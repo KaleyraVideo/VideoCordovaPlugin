@@ -310,6 +310,19 @@ Example of acceptable payload
 }
 ```
 
+## Proguard 
+```groovy
+# Bandyer now Kaleyra proprietary SDK
+-keep class com.bandyer.** { *; }
+-keep interface com.bandyer.** { *; }
+-keep enum com.bandyer.** { *; }
+
+-keep class com.kaleyra.** { *; }
+-keep interface com.kaleyra.** { *; }
+-keep enum com.kaleyra.** { *; }
+```
+
+
 ## TSDoc
 
 The API documentation is available on the github pages link:
