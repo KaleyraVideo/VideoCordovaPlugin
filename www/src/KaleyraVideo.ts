@@ -174,11 +174,7 @@ export default class KaleyraVideo extends EventListener {
      * @param error callback
      */
     reset(success?: () => void, error?: (reason) => void) {
-        if (KaleyraVideo._isAndroid()) {
-            cordova.exec(success, error, "VideoNativePlugin", "reset", []);
-        } else {
-            console.warn("Not yet supported on ", device.platform, " platform.");
-        }
+        cordova.exec(success, error, "VideoNativePlugin", "reset", []);
     }
 
     /**

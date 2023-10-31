@@ -200,6 +200,15 @@ class VideoNativePlugin: CDVPlugin {
         }
     }
 
+    // MARK: - Reset
+
+    @objc
+    func reset(_ command: CDVInvokedUrlCommand) {
+        performer(for: command).perform {
+            plugin.reset()
+        }
+    }
+
     // MARK: - Helpers
 
     private func unwrap<T>(_ value: T?) throws -> T {
