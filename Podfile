@@ -5,7 +5,7 @@ target 'KaleyraVideoCordovaPlugin' do
   use_frameworks!
 
   pod 'Cordova', '~> 6'
-  pod 'Bandyer', '~> 3.6.3'
+  pod 'Bandyer', '~> 3.9.0'
 end
 
 target 'KaleyraVideoCordovaPluginTests' do
