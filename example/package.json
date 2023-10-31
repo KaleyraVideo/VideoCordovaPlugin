@@ -27,7 +27,7 @@
     "@havesource/cordova-plugin-push": "github:kenfouo/cordova-plugin-push",
     "@kaleyra/video-cordova-plugin": "file:..",
     "cordova-android": "^11.0.0",
-    "cordova-ios": "^6.3.0",
+    "cordova-ios": "^7.0.1",
     "cordova-plugin-add-swift-support": "^2.0.2",
     "cordova-plugin-advanced-http": "^3.3.1",
     "cordova-plugin-device": "git+https://github.com/apache/cordova-plugin-device.git",
