@@ -63,7 +63,7 @@
     "babel-loader": "^8.0.6",
     "cordova-paramedic": "^0.5.0",
     "core-js": "^3.1.4",
-    "jest": "^29.5.0",
+    "jest": "^29.7.0",
     "quicktype": "^16.0.43",
     "reflect-metadata": "^0.1.13",
     "regenerator-runtime": "^0.13.2",
