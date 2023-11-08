@@ -46,11 +46,11 @@ jobs:
 
       - name: Run unit tests iOS 16
         run: |
-          xcodebuild clean -workspace Bandyer-Cordova-Plugin.xcworkspace -scheme Bandyer-Cordova-Plugin | xcpretty
-          xcodebuild test -workspace Bandyer-Cordova-Plugin.xcworkspace -scheme Bandyer-Cordova-Plugin -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14,OS=16.2" | xcpretty -s
+          xcodebuild clean -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin | xcpretty
+          xcodebuild test -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14,OS=16.2" | xcpretty -s
 
       - name: Run unit tests iOS 15
         run: |
           sudo xcode-select -s /Applications/Xcode_13.4.app
-          xcodebuild clean -workspace Bandyer-Cordova-Plugin.xcworkspace -scheme Bandyer-Cordova-Plugin | xcpretty
-          xcodebuild test -workspace Bandyer-Cordova-Plugin.xcworkspace -scheme Bandyer-Cordova-Plugin -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.5" | xcpretty -s
+          xcodebuild clean -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin | xcpretty
+          xcodebuild test -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.5" | xcpretty -s
