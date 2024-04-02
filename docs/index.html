@@ -61,6 +61,13 @@ Here&#39;s an example of a device token: <strong>dec105f879924349fd2fa9aa8bb8b70
 <a id="md:voip-notification-payload" class="tsd-anchor"></a><h3><a href="#md:voip-notification-payload">VoIP notification payload</a></h3><p><a href="https://github.com/Bandyer/Bandyer-iOS-SDK/wiki/VOIP-notifications#notification-payload-key-path">Here</a> you can find an example of how your VoIP notifications payload should be structured.</p>
 <a id="md:plugin-connect" class="tsd-anchor"></a><h2><a href="#md:plugin-connect">Plugin connect</a></h2><p>To connect the plugin to the Kaleyra Video system you will need to provide a Session object.
 The session needs a userID and a function returning a promise with the access token for that user</p>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<ul>
+<li>The <em>userID</em> should aready exists in our service. Your backend needs to create it by invoking this api <a href="https://developers.kaleyra.io/reference/video-v2-user-post">create_user</a></li>
+<li>The <em>accessToken</em> should be generated from your backend by invoking this api <a href="https://developers.kaleyra.io/reference/video-v2-sdk-post">get_credentials</a>. Be aware that it expires. The callback will be called multiple times every time a new token is needed to refresh the user session.</li>
+</ul>
+</blockquote>
 <pre><code class="language-javascript"><span class="hl-0">kaleyraVideo</span><span class="hl-1">.</span><span class="hl-3">connect</span><span class="hl-1">({</span><br/><span class="hl-1">    </span><span class="hl-0">userID:</span><span class="hl-1"> </span><span class="hl-4">&quot;usr_xxx&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-3">accessTokenProvider</span><span class="hl-0">:</span><span class="hl-1"> (</span><span class="hl-0">userId</span><span class="hl-1">) </span><span class="hl-5">=&gt;</span><span class="hl-1"> </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-7">Promise</span><span class="hl-1">((</span><span class="hl-0">success</span><span class="hl-1">, </span><span class="hl-0">error</span><span class="hl-1">) </span><span class="hl-5">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-2">// get token for user_xxx and invoke success or error depending on the result</span><br/><span class="hl-1">        </span><span class="hl-3">success</span><span class="hl-1">(</span><span class="hl-4">&quot;jwt_xxx&quot;</span><span class="hl-1">);</span><br/><span class="hl-1">    }),</span><br/><span class="hl-1">});</span>
 </code><button>Copy</button></pre>
 <a id="md:start-a-call" class="tsd-anchor"></a><h2><a href="#md:start-a-call">Start a call</a></h2><p>To make a call you need to specify some params.</p>
