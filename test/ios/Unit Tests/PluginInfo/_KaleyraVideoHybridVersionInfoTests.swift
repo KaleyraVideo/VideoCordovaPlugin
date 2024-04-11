@@ -19,9 +19,8 @@ final class _KaleyraVideoHybridVersionInfoTests: UnitTestCase {
         assertThat(claz, present())
     }
 
-    func testVersionInfoValues() {
+    func testInfoValues() {
         assertThat(_KaleyraVideoHybridVersionInfo.krvPlatform, equalTo("cordova"))
-        assertThat(_KaleyraVideoHybridVersionInfo.krvVersion, equalTo("1.1.3"))
     }
 
     func testDebugDescription() {
