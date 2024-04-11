@@ -1,3 +1,8 @@
+## 1.2.2
+
+- This release fixes a bug on iOS platform that was reporting an incoming call as "Unknown" when no UserDetails and no format was set.
+- Bump Bandyer iOS SDK pod version to 3.11.1 
+
 ## 1.2.1
 
 - Bump Bandyer iOS SDK pod version to 3.11.0
