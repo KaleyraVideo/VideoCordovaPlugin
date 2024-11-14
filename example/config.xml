@@ -46,7 +46,7 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <preference name="deployment-target" value="11.0" />
+        <preference name="deployment-target" value="15.0" />
         <preference name="BackupWebStorage" value="none" />
         <preference name="UseSwiftLanguageVersion" value="5" />
         <edit-config file="*-Info.plist" mode="merge" target="UIBackgroundModes">
