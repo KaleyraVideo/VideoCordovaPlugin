@@ -27,12 +27,11 @@
     "@havesource/cordova-plugin-push": "github:kenfouo/cordova-plugin-push",
     "@kaleyra/video-cordova-plugin": "file:..",
     "cordova-android": "^11.0.0",
-    "cordova-ios": "^7.0.1",
+    "cordova-ios": "^7.1.1",
     "cordova-plugin-add-swift-support": "^2.0.2",
     "cordova-plugin-advanced-http": "^3.3.1",
     "cordova-plugin-device": "git+https://github.com/apache/cordova-plugin-device.git",
-    "cordova-plugin-file": "^7.0.0",
-    "cordova-support-kotlin": "git+https://github.com/Bandyer/cordova-support-kotlin.git"
+    "cordova-plugin-file": "^7.0.0"
   },
   "cordova": {
     "plugins": {
