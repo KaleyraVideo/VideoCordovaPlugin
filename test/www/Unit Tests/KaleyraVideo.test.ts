@@ -352,8 +352,8 @@ describe("User details", () => {
         const sut = makeSUT();
 
         const userDetails = [
-            {userID: "usr_12345", firstName: "Alice", lastName: "Appleseed"},
-            {userID: "usr_54321", firstName: "Bob", lastName: "Appleseed"},
+            {userID: "usr_12345", name: "Alice Appleseed"},
+            {userID: "usr_54321", name: "Bob Appleseed"},
         ];
         sut.addUsersDetails(userDetails);
 
@@ -363,8 +363,8 @@ describe("User details", () => {
         const firstArg = JSON.parse(invocation.args[0]);
         expect(firstArg).toEqual(
             [
-                {userID: "usr_12345", firstName: "Alice", lastName: "Appleseed"},
-                {userID: "usr_54321", firstName: "Bob", lastName: "Appleseed"},
+                {userID: "usr_12345", name: "Alice Appleseed"},
+                {userID: "usr_54321", name: "Bob Appleseed"},
             ],
         );
     });
@@ -389,99 +389,6 @@ describe("User details", () => {
         expect(invocation.service).toMatch("VideoNativePlugin");
         expect(invocation.action).toMatch("removeUsersDetails");
         expect(invocation.args).toHaveLength(0);
-    });
-
-    test('Throws invalid argument error when "default format" does not contain any keyword matching any "UserDetails" property', () => {
-        const sut = makeSUT();
-
-        const setFormat = () => {
-            sut.setUserDetailsFormat({
-                default: "{fooBar}",
-            });
-        };
-
-        expect(setFormat).toThrowError(Error);
-    });
-
-    test('Throws invalid argument error when "default format" contains some keyword not matching any "UserDetails" property', () => {
-        const sut = makeSUT();
-
-        const setFormat = () => {
-            sut.setUserDetailsFormat({
-                default: "${firstName} ${fooBar}",
-            });
-        };
-
-        expect(setFormat).toThrowError(Error);
-    });
-
-    test('Throws invalid argument error when "default format" does not contain any keyword in the format {KEYWORD_NAME}', () => {
-        const sut = makeSUT();
-
-        const setFormat = () => {
-            sut.setUserDetailsFormat({
-                default: "{fooBar",
-            });
-        };
-
-        expect(setFormat).toThrowError(Error);
-    });
-
-    test('Throws invalid argument error when "android notification format" does not contain any keyword matching any "UserDetails" property', () => {
-        const sut = makeSUT();
-
-        const setFormat = () => {
-            sut.setUserDetailsFormat({
-                default: "${firstName} ${lastName}",
-                androidNotification: "{fooBar}",
-            });
-        };
-
-        expect(setFormat).toThrowError(Error);
-    });
-
-    test('Throws invalid argument error when "android notification format" contains some keyword not matching any "UserDetails" property', () => {
-        const sut = makeSUT();
-
-        const setFormat = () => {
-            sut.setUserDetailsFormat({
-                default: "${firstName} ${lastName}",
-                androidNotification: "${fooBar}",
-            });
-        };
-
-        expect(setFormat).toThrowError(Error);
-    });
-
-    test('Throws invalid argument error when "android notification format" does not contain any keyword in the format {KEYWORD_NAME}', () => {
-        const sut = makeSUT();
-
-        const setFormat = () => {
-            sut.setUserDetailsFormat({
-                default: "${firstName} ${lastName}",
-                androidNotification: "${fooBar",
-            });
-        };
-
-        expect(setFormat).toThrowError(Error);
-    });
-
-    test('Calls "setUserDetailsFormat" action providing the formats received as argument', () => {
-        const sut = makeSUT();
-
-        sut.setUserDetailsFormat({
-            default: "${firstName} ${lastName}",
-            androidNotification: "${firstName} ${lastName}",
-        });
-
-        const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("VideoNativePlugin");
-        expect(invocation.action).toMatch("setUserDetailsFormat");
-        const firstArg = JSON.parse(invocation.args[0]);
-        expect(firstArg).toEqual({
-            default: "${firstName} ${lastName}",
-            androidNotification: "${firstName} ${lastName}",
-        });
     });
 
     test('When running an Android device, calls "clearUserCache" action when asked to clear the user cache', () => {
