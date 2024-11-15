@@ -180,16 +180,6 @@ class VideoNativePlugin: CDVPlugin {
         }
     }
 
-    // MARK: - Push notifications
-
-    @objc
-    func handlePushNotificationPayload(_ command: CDVInvokedUrlCommand) {
-        performer(for: command).perform {
-            let json = try unwrap(command.arguments.first as? String)
-            plugin.handlePushNotificationPayload(json)
-        }
-    }
-
     // MARK: - Reset
 
     @objc

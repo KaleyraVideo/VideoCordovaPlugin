@@ -388,30 +388,6 @@ describe("User details", () => {
     });
 });
 
-describe("Push notifications handling", () => {
-
-    test("Throws an invalid argument error when an empty payload is provided as argument", () => {
-        const sut = makeSUT();
-
-        const handleNotification = () => {
-            sut.handlePushNotificationPayload("");
-        };
-
-        expect(handleNotification).toThrowError(Error);
-    });
-
-    test('Calls "handlePushNotificationPayload" with the payload received as argument', () => {
-        const sut = makeSUT();
-
-        sut.handlePushNotificationPayload("Some push payload");
-
-        const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("VideoNativePlugin");
-        expect(invocation.action).toMatch("handlePushNotificationPayload");
-        expect(invocation.args[0]).toEqual("Some push payload");
-    });
-});
-
 describe("Starting a chat", () => {
 
     test("Throws an invalid argument error when an empty user alias is provided as argument", () => {

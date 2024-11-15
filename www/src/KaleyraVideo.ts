@@ -257,33 +257,6 @@ export default class KaleyraVideo extends EventListener {
     }
 
     /**
-     * Call this method to allow Kaleyra Video to handle a notification!
-     *
-     * **IMPORTANT**
-     *
-     * For Android no js method will ever be called when the app is closed or in background!
-     *
-     * To handle notifications while in background and/or with app closed you may:
-     * - use phonegap-plugin-push and set server side a parameter {"force-start": "1"} when the notification is created  (This will open the app and put it right away in background and then handle the notifications)
-     * - Handle yourself the notifications natively, it will allow you to define a different behaviour based on your own logic
-     * - Define the lines as described in our documentation in your config.xml and Kaleyra Video will handle them for you natively (No handling notification callback via js will ever be called, `KaleyraVideo.handlePushNotificationPayload` included)
-     *
-     * @param payload notification data payload as String
-     * @param success callback
-     * @param error callback
-     * @throws IllegalArgumentError
-     */
-    handlePushNotificationPayload(payload: string, success?: () => void, error?: () => void) {
-        assert<string>(payload);
-
-        if (payload === "" || payload === "undefined") {
-            throw new IllegalArgumentError("Expected a not empty payload!");
-        }
-
-        cordova.exec(success, error, "VideoNativePlugin", "handlePushNotificationPayload", [payload]);
-    }
-
-    /**
      * Open chat
      * @param userID user you want to chat with
      * @throws IllegalArgumentError
