@@ -1,39 +1,39 @@
 PODS:
-  - Bandyer (3.12.1):
-    - Bandyer/Core (= 3.12.1)
-    - Bandyer/WebRTC (= 3.12.1)
-  - Bandyer/Core (3.12.1)
-  - Bandyer/WebRTC (3.12.1)
   - Cordova (6.2.0):
     - Cordova/Cordova (= 6.2.0)
   - Cordova/Cordova (6.2.0)
+  - KaleyraVideoSDK (4.0.0):
+    - KaleyraVideoSDK/Core (= 4.0.0)
+    - KaleyraVideoSDK/WebRTC (= 4.0.0)
+  - KaleyraVideoSDK/Core (4.0.0)
+  - KaleyraVideoSDK/WebRTC (4.0.0)
   - OCHamcrest (8.0.0)
   - OCMockito (6.0.0):
     - OCHamcrest (~> 8.0)
   - SwiftHamcrest (2.2.4)
 
 DEPENDENCIES:
-  - Bandyer (~> 3.12.1)
   - Cordova (~> 6)
+  - KaleyraVideoSDK (~> 4.0.0)
   - OCHamcrest (~> 8.0)
   - OCMockito (~> 6.0)
   - SwiftHamcrest (= 2.2.4)
 
 SPEC REPOS:
   trunk:
-    - Bandyer
     - Cordova
+    - KaleyraVideoSDK
     - OCHamcrest
     - OCMockito
     - SwiftHamcrest
 
 SPEC CHECKSUMS:
-  Bandyer: 85a49f0c6c3e2084075991dc05a37ae3b54ca9d8
   Cordova: 7e83572fd98d1391ce92d93c081ce8d99d8cb014
+  KaleyraVideoSDK: 2350e37e969a0b69bc36f0ea77c4c580b1579fa9
   OCHamcrest: a613690381f1dac7637c18962c10dbe8feca4bb5
   OCMockito: 780f04370226f81a9d972c97d1203864ef609f5b
   SwiftHamcrest: a45dd878978049c0953259aa01c34fd7258d0340
 
-PODFILE CHECKSUM: c50123843b1871846230a847a6bf5e170280cc7b
+PODFILE CHECKSUM: 1bb917a2dc67d96fbb41a86d5598efe6d6351c38
 
 COCOAPODS: 1.15.2

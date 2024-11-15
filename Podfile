@@ -1,11 +1,11 @@
-platform :ios, '11.0'
+platform :ios, '15.0'
 
 target 'KaleyraVideoCordovaPlugin' do
   project 'KaleyraVideoCordovaPlugin'
   use_frameworks!
 
   pod 'Cordova', '~> 6'
-  pod 'Bandyer', '~> 3.12.1'
+  pod 'KaleyraVideoSDK', '~> 4.0.0'
 end
 
 target 'KaleyraVideoCordovaPluginTests' do
