@@ -11,8 +11,6 @@ import {IllegalArgumentError} from "../../native-bridge/TypeScript/errors/Illega
 import {assert} from "typia";
 import {Environments} from "../../native-bridge/TypeScript/Environments";
 import {CallDisplayMode} from "../../native-bridge/TypeScript/types/CallDisplayMode";
-import {UserDetailsFormat} from "../../native-bridge/TypeScript/types/UserDetailsFormat";
-import {UserDetailsFormatValidator} from "../../native-bridge/TypeScript/UserDetailsFormatValidator";
 import {Regions} from "../../native-bridge/TypeScript/Regions";
 import {Session} from "../../native-bridge/TypeScript/types/Session";
 import {RecordingType} from "../../native-bridge/TypeScript/types/RecordingType";
@@ -265,18 +263,6 @@ export default class KaleyraVideo extends EventListener {
             throw new IllegalArgumentError("No userDetails were provided!");
         }
         cordova.exec(null, null, "VideoNativePlugin", "addUsersDetails", [JSON.stringify(userDetails)]);
-    }
-
-    setUserDetailsFormat(format: UserDetailsFormat) {
-        assert<UserDetailsFormat>(format);
-
-        const validator = new UserDetailsFormatValidator();
-        validator.validate(format.default);
-        if (format.androidNotification !== undefined) {
-            validator.validate(format.androidNotification);
-        }
-
-        cordova.exec(null, null, "VideoNativePlugin", "setUserDetailsFormat", [JSON.stringify(format)]);
     }
 
     /**

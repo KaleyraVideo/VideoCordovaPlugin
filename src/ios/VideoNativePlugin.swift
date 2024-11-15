@@ -7,7 +7,6 @@ import UIKit
 import Cordova
 #endif
 
-@available(iOS 12.0, *)
 @objc(KCPVideoNativePlugin)
 class VideoNativePlugin: CDVPlugin {
 
@@ -178,15 +177,6 @@ class VideoNativePlugin: CDVPlugin {
     func removeUsersDetails(_ command: CDVInvokedUrlCommand) {
         performer(for: command).perform {
             plugin.removeUsersDetails()
-        }
-    }
-
-    @objc
-    func setUserDetailsFormat(_ command: CDVInvokedUrlCommand) {
-        performer(for: command).perform {
-            let json = try unwrap(command.arguments.first as? String)
-            let format = try UserDetailsFormat.decodeJSON(json)
-            plugin.setUserDetailsFormat(format)
         }
     }
 

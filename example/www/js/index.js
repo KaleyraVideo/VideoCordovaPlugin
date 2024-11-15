@@ -155,9 +155,6 @@ var app = {
                 {userID: "kri1", firstName: "Name", lastName: "Surname"},
                 {userID: "kri2", firstName: "Name2", lastName: "Surname2"},
             ]);
-            kaleyraVideo.setUserDetailsFormat({
-                default: "${firstName} ${lastName}"
-            });
             kaleyraVideo.connect({
                 userID: userID,
                 accessTokenProvider: (userID) => accessTokenProvider(userID)
