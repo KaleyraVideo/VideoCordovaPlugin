@@ -120,13 +120,13 @@ var app = {
         kaleyraVideo.on(KaleyraVideo.events.callModuleStatusChanged, function (status) {
             console.debug("callModuleStatusChanged", status);
             var callButton = $('#callButton');
-            callButton.prop('disabled', status !== 'ready');
+            callButton.prop('disabled', status !== 'connected');
         });
 
         kaleyraVideo.on(KaleyraVideo.events.chatModuleStatusChanged, function (status) {
             console.debug("chatModuleStatusChanged", status);
             var chatButton = $('#chatButton');
-            chatButton.prop('disabled', status !== 'ready');
+            chatButton.prop('disabled', status !== 'connected');
         });
 
         kaleyraVideo.on(KaleyraVideo.events.callError, function (reason) {
