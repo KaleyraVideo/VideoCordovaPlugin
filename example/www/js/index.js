@@ -152,8 +152,10 @@ var app = {
 
         var connectPlugin = function (userID) {
             kaleyraVideo.addUsersDetails([
-                {userID: "kri1", firstName: "Name", lastName: "Surname"},
-                {userID: "kri2", firstName: "Name2", lastName: "Surname2"},
+                {userId: "kri1", name: "Name"},
+                {userId: "kri2", name: "Name2"},
+                {userId: "ale1", name: "Ale 1"},
+                {userId: "ale2", name: "Ale 2"},
             ]);
             kaleyraVideo.connect({
                 userID: userID,
