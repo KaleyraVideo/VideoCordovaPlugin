@@ -98,7 +98,6 @@
         <source-file src="native-bridge/iOS/Source/DTOs/Tools+Decodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/UserDetails+Decodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/UserDetails+KaleyraVideoSDK.swift" />
-        <source-file src="native-bridge/iOS/Source/DTOs/UserDetailsFormat+Decodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/VoipHandlingStrategy+Decodable.swift" />
 
         <source-file src="native-bridge/iOS/Source/Events/Emitter/EventEmitter.swift" />
