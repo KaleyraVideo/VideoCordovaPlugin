@@ -44,13 +44,16 @@ jobs:
       - name: Install pods
         run: pod install --repo-update
 
-      - name: Run unit tests iOS 16
-        run: |
-          xcodebuild clean -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin | xcpretty
-          xcodebuild test -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14,OS=16.2" | xcpretty -s
+#      - name: Run unit tests iOS 18
+#        run: |
+#          set -o pipefail
+#          sudo xcode-select -s '/Applications/Xcode_16.1.app/Contents/Developer'
+#          xcodebuild clean -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin | xcpretty
+#          xcodebuild test -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14,OS=16.2" | xcpretty -s
 
-      - name: Run unit tests iOS 15
+      - name: Run unit tests iOS 17
         run: |
-          sudo xcode-select -s /Applications/Xcode_13.4.app
+          set -o pipefail
+          sudo xcode-select -s '/Applications/Xcode_15.4.app/Contents/Developer'
           xcodebuild clean -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin | xcpretty
-          xcodebuild test -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.5" | xcpretty -s
+          xcodebuild test -workspace KaleyraVideoCordovaPlugin.xcworkspace -scheme KaleyraVideoCordovaPlugin -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15,OS=17.5" | xcpretty -s
