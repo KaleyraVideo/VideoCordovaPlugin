@@ -13,16 +13,13 @@
 		6D0E0F6E289C188B00D2F248 /* BoolMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E0F6D289C188B00D2F248 /* BoolMatchers.swift */; };
 		6D1D72F1289A79410068E335 /* VideoNativePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D72F0289A79410068E335 /* VideoNativePlugin.swift */; };
 		6D3A42EC28990FB4000A05FA /* NSString+PushTokenData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A42EB28990FB4000A05FA /* NSString+PushTokenData.m */; };
-		6D3A42FC28996DE2000A05FA /* UserDetailsFixtureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A42FB28996DE2000A05FA /* UserDetailsFixtureFactory.swift */; };
 		6D3A43052899724F000A05FA /* CompletionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A43042899724F000A05FA /* CompletionSpy.swift */; };
 		6D98D776289813B9008EEF02 /* CordovaEventEmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D775289813B9008EEF02 /* CordovaEventEmitterTests.swift */; };
 		6D98D77A289818B3008EEF02 /* CordovaEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D779289818B3008EEF02 /* CordovaEventEmitter.swift */; };
 		6D98D7842898257A008EEF02 /* CommandDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D7832898257A008EEF02 /* CommandDelegateSpy.swift */; };
 		6D98D786289825C2008EEF02 /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D785289825C2008EEF02 /* Unwrap.swift */; };
-		6D98D78A289830F2008EEF02 /* CallClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D789289830F2008EEF02 /* CallClientStub.swift */; };
 		6D98D78D2898312E008EEF02 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D78B28983112008EEF02 /* Weak.swift */; };
 		6D98D78F28983144008EEF02 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D78E28983144008EEF02 /* TestHelpers.swift */; };
-		6D98D79728983586008EEF02 /* ChatClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98D79628983586008EEF02 /* ChatClientStub.swift */; };
 		A91AADD62452E5AF007003AF /* BCPTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A91AADC62452E5AF007003AF /* BCPTestCase.m */; };
 		A92581A1268E0D8900FD4202 /* empty_group.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92581A0268E0D5200FD4202 /* empty_group.plist */; };
 		A92581A3268E0E0500FD4202 /* empty_extension_identifier.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92581A2268E0DE600FD4202 /* empty_extension_identifier.plist */; };
