@@ -204,24 +204,6 @@ extension KaleyraVideoHybridNativeBridge.CallOptions: Encodable {
     }
 }
 
-extension UserDetailsFormat: Encodable {
-
-    private enum CodingKeys: String, CodingKey {
-        case `default`
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(userDetailsFormatDefault, forKey: .default)
-    }
-
-    func JSONEncoded() throws -> String {
-        let encoder = JSONEncoder()
-        let data = try encoder.encode(self)
-        return String(data: data, encoding: .utf8)!
-    }
-}
-
 extension CreateCallOptions: Encodable {
 
     private enum CodingKeys: String, CodingKey {
@@ -264,21 +246,15 @@ extension UserDetails: Encodable {
 
     private enum CodingKeys: String, CodingKey {
         case userID
-        case firstName
-        case lastName
-        case email
-        case nickName
-        case profileImageURL
+        case name
+        case imageUrl
     }
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(userID, forKey: .userID)
-        try container.encode(firstName, forKey: .firstName)
-        try container.encode(lastName, forKey: .lastName)
-        try container.encode(email, forKey: .email)
-        try container.encode(nickName, forKey: .nickName)
-        try container.encode(profileImageURL, forKey: .profileImageURL)
+        try container.encode(name, forKey: .name)
+        try container.encode(imageURL, forKey: .imageUrl)
     }
 
     func JSONEncoded() throws -> String {
