@@ -304,22 +304,6 @@ describe("Starting a call", () => {
     });
 });
 
-describe("In call user verification", () => {
-
-    test("When running on Android device, calls verifyCurrentCall with the argument provided as verification object parameter", () => {
-        device.simulateAndroid();
-        const sut = makeSUT();
-
-        sut.verifyCurrentCall(true);
-
-        const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("VideoNativePlugin");
-        expect(invocation.action).toMatch("verifyCurrentCall");
-        const firstArg = JSON.parse(invocation.args[0]);
-        expect(firstArg).toEqual(true);
-    });
-});
-
 describe("Call display mode", () => {
 
     test('When running on Android device, calls "setDisplayModeForCurrentCall" providing the mode received as first argument', () => {

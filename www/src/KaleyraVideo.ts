@@ -204,22 +204,6 @@ export default class KaleyraVideo extends EventListener {
     }
 
     /**
-     * Verify the user for the current call
-     * @param verify true if the user is verified, false otherwise
-     * @throws IllegalArgumentError
-     */
-    verifyCurrentCall(verify: boolean) {
-        assert<boolean>(verify);
-
-        if (KaleyraVideo._isAndroid()) {
-            cordova.exec(null, null, "VideoNativePlugin", "verifyCurrentCall", [verify]);
-        } else {
-            console.warn("Not yet supported on ", device.platform, " platform.");
-        }
-
-    }
-
-    /**
      * Set the UI display mode for the current call
      * @param mode FOREGROUND, FOREGROUND_PICTURE_IN_PICTURE, BACKGROUND
      * @throws IllegalArgumentError
