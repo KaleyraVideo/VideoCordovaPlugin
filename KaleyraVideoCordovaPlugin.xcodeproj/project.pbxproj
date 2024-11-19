@@ -34,6 +34,42 @@
 		A992C418268DEBCB001EBBAB /* missing_broadcast.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C417268DEB85001EBBAB /* missing_broadcast.plist */; };
 		A992C41A268DED46001EBBAB /* mismatched_group.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C419268DED35001EBBAB /* mismatched_group.plist */; };
 		A992C41C268DEDB9001EBBAB /* mismatched_extension_identifier.plist in Resources */ = {isa = PBXBuildFile; fileRef = A992C41B268DEDAA001EBBAB /* mismatched_extension_identifier.plist */; };
+		F941E8382CECF7FC007A8423 /* DTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8142CECF7FC007A8423 /* DTOs.swift */; };
+		F941E8392CECF7FC007A8423 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8152CECF7FC007A8423 /* JSONDecodable.swift */; };
+		F941E83A2CECF7FC007A8423 /* IosConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8162CECF7FC007A8423 /* IosConfiguration+Decodable.swift */; };
+		F941E83B2CECF7FC007A8423 /* CallType+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8172CECF7FC007A8423 /* CallType+KaleyraVideoSDK.swift */; };
+		F941E83C2CECF7FC007A8423 /* Environment+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8182CECF7FC007A8423 /* Environment+KaleyraVideoSDK.swift */; };
+		F941E83D2CECF7FC007A8423 /* RecordingType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8192CECF7FC007A8423 /* RecordingType+Decodable.swift */; };
+		F941E83E2CECF7FC007A8423 /* CallType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E81A2CECF7FC007A8423 /* CallType+Decodable.swift */; };
+		F941E83F2CECF7FC007A8423 /* ToolsConfiguration+UserInterfacePresenterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E81B2CECF7FC007A8423 /* ToolsConfiguration+UserInterfacePresenterConfiguration.swift */; };
+		F941E8402CECF7FC007A8423 /* AccessTokenRequest+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E81C2CECF7FC007A8423 /* AccessTokenRequest+Encodable.swift */; };
+		F941E8412CECF7FC007A8423 /* CallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E81D2CECF7FC007A8423 /* CallOptions+Decodable.swift */; };
+		F941E8422CECF7FC007A8423 /* ChatToolConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E81E2CECF7FC007A8423 /* ChatToolConfiguration+Decodable.swift */; };
+		F941E8432CECF7FC007A8423 /* AudioCallOptions+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E81F2CECF7FC007A8423 /* AudioCallOptions+KaleyraVideoSDK.swift */; };
+		F941E8442CECF7FC007A8423 /* UserDetails+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8202CECF7FC007A8423 /* UserDetails+Decodable.swift */; };
+		F941E8452CECF7FC007A8423 /* Array+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8212CECF7FC007A8423 /* Array+JSON.swift */; };
+		F941E8462CECF7FC007A8423 /* Region+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8222CECF7FC007A8423 /* Region+KaleyraVideoSDK.swift */; };
+		F941E8472CECF7FC007A8423 /* CreateCallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8232CECF7FC007A8423 /* CreateCallOptions+Decodable.swift */; };
+		F941E8482CECF7FC007A8423 /* ToolsConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8242CECF7FC007A8423 /* ToolsConfiguration+Decodable.swift */; };
+		F941E8492CECF7FC007A8423 /* KaleyraVideoConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8252CECF7FC007A8423 /* KaleyraVideoConfiguration+Decodable.swift */; };
+		F941E84A2CECF7FC007A8423 /* AccessTokenResponse+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8262CECF7FC007A8423 /* AccessTokenResponse+Decodable.swift */; };
+		F941E84B2CECF7FC007A8423 /* AudioCallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8272CECF7FC007A8423 /* AudioCallOptions+Equatable.swift */; };
+		F941E84C2CECF7FC007A8423 /* AudioCallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8282CECF7FC007A8423 /* AudioCallOptions+Decodable.swift */; };
+		F941E84D2CECF7FC007A8423 /* AudioCallType+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8292CECF7FC007A8423 /* AudioCallType+KaleyraVideoSDK.swift */; };
+		F941E84E2CECF7FC007A8423 /* CallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E82A2CECF7FC007A8423 /* CallOptions+Equatable.swift */; };
+		F941E84F2CECF7FC007A8423 /* CallKitConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E82B2CECF7FC007A8423 /* CallKitConfiguration+Decodable.swift */; };
+		F941E8502CECF7FC007A8423 /* Environment+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E82C2CECF7FC007A8423 /* Environment+Decodable.swift */; };
+		F941E8512CECF7FC007A8423 /* CreateCallOptions+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E82D2CECF7FC007A8423 /* CreateCallOptions+KaleyraVideoSDK.swift */; };
+		F941E8522CECF7FC007A8423 /* RecordingType+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E82E2CECF7FC007A8423 /* RecordingType+KaleyraVideoSDK.swift */; };
+		F941E8532CECF7FC007A8423 /* ToolsConfiguration+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E82F2CECF7FC007A8423 /* ToolsConfiguration+KaleyraVideoSDK.swift */; };
+		F941E8542CECF7FC007A8423 /* UserDetails+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8302CECF7FC007A8423 /* UserDetails+KaleyraVideoSDK.swift */; };
+		F941E8552CECF7FC007A8423 /* AudioCallType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8312CECF7FC007A8423 /* AudioCallType+Decodable.swift */; };
+		F941E8562CECF7FC007A8423 /* CallOptions+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8322CECF7FC007A8423 /* CallOptions+KaleyraVideoSDK.swift */; };
+		F941E8572CECF7FC007A8423 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8332CECF7FC007A8423 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift */; };
+		F941E8582CECF7FC007A8423 /* Region+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8342CECF7FC007A8423 /* Region+Decodable.swift */; };
+		F941E8592CECF7FC007A8423 /* CreateCallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8352CECF7FC007A8423 /* CreateCallOptions+Equatable.swift */; };
+		F941E85A2CECF7FC007A8423 /* ScreenShareToolConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8362CECF7FC007A8423 /* ScreenShareToolConfiguration+Decodable.swift */; };
+		F941E85B2CECF7FC007A8423 /* VoipHandlingStrategy+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F941E8372CECF7FC007A8423 /* VoipHandlingStrategy+Decodable.swift */; };
 		F95FE5962CE74ABC0036C6A6 /* UsersDetailsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5462CE74ABB0036C6A6 /* UsersDetailsCache.swift */; };
 		F95FE5972CE74ABC0036C6A6 /* UsersDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5482CE74ABB0036C6A6 /* UsersDetailsProvider.swift */; };
 		F95FE5982CE74ABC0036C6A6 /* BroadcastConfigurationPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE54B2CE74ABB0036C6A6 /* BroadcastConfigurationPlistReader.swift */; };
@@ -53,41 +89,6 @@
 		F95FE5A62CE74ABC0036C6A6 /* URL+FromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE55F2CE74ABC0036C6A6 /* URL+FromString.swift */; };
 		F95FE5A72CE74ABC0036C6A6 /* VideoHybridNativeBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5612CE74ABC0036C6A6 /* VideoHybridNativeBridge.swift */; };
 		F95FE5A82CE74ABC0036C6A6 /* VideoHybridNativeBridgeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5622CE74ABC0036C6A6 /* VideoHybridNativeBridgeError.swift */; };
-		F95FE5A92CE74ABC0036C6A6 /* AccessTokenRequest+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5642CE74ABC0036C6A6 /* AccessTokenRequest+Encodable.swift */; };
-		F95FE5AA2CE74ABC0036C6A6 /* AccessTokenResponse+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5652CE74ABC0036C6A6 /* AccessTokenResponse+Decodable.swift */; };
-		F95FE5AB2CE74ABC0036C6A6 /* Array+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5662CE74ABC0036C6A6 /* Array+JSON.swift */; };
-		F95FE5AC2CE74ABC0036C6A6 /* AudioCallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5672CE74ABC0036C6A6 /* AudioCallOptions+Decodable.swift */; };
-		F95FE5AD2CE74ABC0036C6A6 /* AudioCallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5682CE74ABC0036C6A6 /* AudioCallOptions+Equatable.swift */; };
-		F95FE5AE2CE74ABC0036C6A6 /* AudioCallOptions+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5692CE74ABC0036C6A6 /* AudioCallOptions+KaleyraVideoSDK.swift */; };
-		F95FE5AF2CE74ABC0036C6A6 /* AudioCallType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE56A2CE74ABC0036C6A6 /* AudioCallType+Decodable.swift */; };
-		F95FE5B02CE74ABC0036C6A6 /* AudioCallType+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE56B2CE74ABC0036C6A6 /* AudioCallType+KaleyraVideoSDK.swift */; };
-		F95FE5B12CE74ABC0036C6A6 /* CallKitConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE56C2CE74ABC0036C6A6 /* CallKitConfiguration+Decodable.swift */; };
-		F95FE5B22CE74ABC0036C6A6 /* CallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE56D2CE74ABC0036C6A6 /* CallOptions+Decodable.swift */; };
-		F95FE5B32CE74ABC0036C6A6 /* CallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE56E2CE74ABC0036C6A6 /* CallOptions+Equatable.swift */; };
-		F95FE5B42CE74ABC0036C6A6 /* CallOptions+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE56F2CE74ABC0036C6A6 /* CallOptions+KaleyraVideoSDK.swift */; };
-		F95FE5B52CE74ABC0036C6A6 /* CallType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5702CE74ABC0036C6A6 /* CallType+Decodable.swift */; };
-		F95FE5B62CE74ABC0036C6A6 /* CallType+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5712CE74ABC0036C6A6 /* CallType+KaleyraVideoSDK.swift */; };
-		F95FE5B72CE74ABC0036C6A6 /* ChatToolConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5722CE74ABC0036C6A6 /* ChatToolConfiguration+Decodable.swift */; };
-		F95FE5B82CE74ABC0036C6A6 /* CreateCallOptions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5732CE74ABC0036C6A6 /* CreateCallOptions+Decodable.swift */; };
-		F95FE5B92CE74ABC0036C6A6 /* CreateCallOptions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5742CE74ABC0036C6A6 /* CreateCallOptions+Equatable.swift */; };
-		F95FE5BA2CE74ABC0036C6A6 /* CreateCallOptions+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5752CE74ABC0036C6A6 /* CreateCallOptions+KaleyraVideoSDK.swift */; };
-		F95FE5BB2CE74ABC0036C6A6 /* DTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5762CE74ABC0036C6A6 /* DTOs.swift */; };
-		F95FE5BC2CE74ABC0036C6A6 /* Environment+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5772CE74ABC0036C6A6 /* Environment+Decodable.swift */; };
-		F95FE5BD2CE74ABC0036C6A6 /* Environment+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5782CE74ABC0036C6A6 /* Environment+KaleyraVideoSDK.swift */; };
-		F95FE5BE2CE74ABC0036C6A6 /* IosConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5792CE74ABC0036C6A6 /* IosConfiguration+Decodable.swift */; };
-		F95FE5BF2CE74ABC0036C6A6 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE57A2CE74ABC0036C6A6 /* JSONDecodable.swift */; };
-		F95FE5C02CE74ABC0036C6A6 /* KaleyraVideoConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE57B2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+Decodable.swift */; };
-		F95FE5C12CE74ABC0036C6A6 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE57C2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift */; };
-		F95FE5C22CE74ABC0036C6A6 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE57D2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift */; };
-		F95FE5C32CE74ABC0036C6A6 /* RecordingType+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE57E2CE74ABC0036C6A6 /* RecordingType+Decodable.swift */; };
-		F95FE5C42CE74ABC0036C6A6 /* RecordingType+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE57F2CE74ABC0036C6A6 /* RecordingType+KaleyraVideoSDK.swift */; };
-		F95FE5C52CE74ABC0036C6A6 /* Region+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5802CE74ABC0036C6A6 /* Region+Decodable.swift */; };
-		F95FE5C62CE74ABC0036C6A6 /* Region+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5812CE74ABC0036C6A6 /* Region+KaleyraVideoSDK.swift */; };
-		F95FE5C72CE74ABC0036C6A6 /* ScreenShareToolConfiguration+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5822CE74ABC0036C6A6 /* ScreenShareToolConfiguration+Decodable.swift */; };
-		F95FE5C82CE74ABC0036C6A6 /* Tools+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5832CE74ABC0036C6A6 /* Tools+Decodable.swift */; };
-		F95FE5C92CE74ABC0036C6A6 /* UserDetails+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5842CE74ABC0036C6A6 /* UserDetails+Decodable.swift */; };
-		F95FE5CA2CE74ABC0036C6A6 /* UserDetails+KaleyraVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5852CE74ABC0036C6A6 /* UserDetails+KaleyraVideoSDK.swift */; };
-		F95FE5CB2CE74ABC0036C6A6 /* VoipHandlingStrategy+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5862CE74ABC0036C6A6 /* VoipHandlingStrategy+Decodable.swift */; };
 		F95FE5CC2CE74ABC0036C6A6 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5882CE74ABC0036C6A6 /* Atomic.swift */; };
 		F95FE5CD2CE74ABC0036C6A6 /* DispatchQueue+isMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE5892CE74ABC0036C6A6 /* DispatchQueue+isMain.swift */; };
 		F95FE5CE2CE74ABC0036C6A6 /* Locking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FE58A2CE74ABC0036C6A6 /* Locking.swift */; };
@@ -156,6 +157,42 @@
 		A9C31AFC22C22D1100BC33D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCF411674223EC17D82005D5 /* Pods_KaleyraVideoCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaleyraVideoCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A89B1AF6CA966B638E9D97 /* Pods_KaleyraVideoCordovaPluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaleyraVideoCordovaPluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F941E8142CECF7FC007A8423 /* DTOs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTOs.swift; sourceTree = "<group>"; };
+		F941E8152CECF7FC007A8423 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		F941E8162CECF7FC007A8423 /* IosConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IosConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8172CECF7FC007A8423 /* CallType+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallType+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E8182CECF7FC007A8423 /* Environment+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E8192CECF7FC007A8423 /* RecordingType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordingType+Decodable.swift"; sourceTree = "<group>"; };
+		F941E81A2CECF7FC007A8423 /* CallType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallType+Decodable.swift"; sourceTree = "<group>"; };
+		F941E81B2CECF7FC007A8423 /* ToolsConfiguration+UserInterfacePresenterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToolsConfiguration+UserInterfacePresenterConfiguration.swift"; sourceTree = "<group>"; };
+		F941E81C2CECF7FC007A8423 /* AccessTokenRequest+Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccessTokenRequest+Encodable.swift"; sourceTree = "<group>"; };
+		F941E81D2CECF7FC007A8423 /* CallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+Decodable.swift"; sourceTree = "<group>"; };
+		F941E81E2CECF7FC007A8423 /* ChatToolConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatToolConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F941E81F2CECF7FC007A8423 /* AudioCallOptions+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E8202CECF7FC007A8423 /* UserDetails+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetails+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8212CECF7FC007A8423 /* Array+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+JSON.swift"; sourceTree = "<group>"; };
+		F941E8222CECF7FC007A8423 /* Region+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Region+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E8232CECF7FC007A8423 /* CreateCallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8242CECF7FC007A8423 /* ToolsConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToolsConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8252CECF7FC007A8423 /* KaleyraVideoConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KaleyraVideoConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8262CECF7FC007A8423 /* AccessTokenResponse+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccessTokenResponse+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8272CECF7FC007A8423 /* AudioCallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+Equatable.swift"; sourceTree = "<group>"; };
+		F941E8282CECF7FC007A8423 /* AudioCallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8292CECF7FC007A8423 /* AudioCallType+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallType+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E82A2CECF7FC007A8423 /* CallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+Equatable.swift"; sourceTree = "<group>"; };
+		F941E82B2CECF7FC007A8423 /* CallKitConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallKitConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F941E82C2CECF7FC007A8423 /* Environment+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+Decodable.swift"; sourceTree = "<group>"; };
+		F941E82D2CECF7FC007A8423 /* CreateCallOptions+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E82E2CECF7FC007A8423 /* RecordingType+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordingType+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E82F2CECF7FC007A8423 /* ToolsConfiguration+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToolsConfiguration+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E8302CECF7FC007A8423 /* UserDetails+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetails+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E8312CECF7FC007A8423 /* AudioCallType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallType+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8322CECF7FC007A8423 /* CallOptions+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E8332CECF7FC007A8423 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KaleyraVideoConfiguration+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
+		F941E8342CECF7FC007A8423 /* Region+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Region+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8352CECF7FC007A8423 /* CreateCallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+Equatable.swift"; sourceTree = "<group>"; };
+		F941E8362CECF7FC007A8423 /* ScreenShareToolConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScreenShareToolConfiguration+Decodable.swift"; sourceTree = "<group>"; };
+		F941E8372CECF7FC007A8423 /* VoipHandlingStrategy+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VoipHandlingStrategy+Decodable.swift"; sourceTree = "<group>"; };
 		F95FE5462CE74ABB0036C6A6 /* UsersDetailsCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersDetailsCache.swift; sourceTree = "<group>"; };
 		F95FE5482CE74ABB0036C6A6 /* UsersDetailsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersDetailsProvider.swift; sourceTree = "<group>"; };
 		F95FE54B2CE74ABB0036C6A6 /* BroadcastConfigurationPlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadcastConfigurationPlistReader.swift; sourceTree = "<group>"; };
@@ -175,41 +212,6 @@
 		F95FE55F2CE74ABC0036C6A6 /* URL+FromString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+FromString.swift"; sourceTree = "<group>"; };
 		F95FE5612CE74ABC0036C6A6 /* VideoHybridNativeBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHybridNativeBridge.swift; sourceTree = "<group>"; };
 		F95FE5622CE74ABC0036C6A6 /* VideoHybridNativeBridgeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHybridNativeBridgeError.swift; sourceTree = "<group>"; };
-		F95FE5642CE74ABC0036C6A6 /* AccessTokenRequest+Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccessTokenRequest+Encodable.swift"; sourceTree = "<group>"; };
-		F95FE5652CE74ABC0036C6A6 /* AccessTokenResponse+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccessTokenResponse+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5662CE74ABC0036C6A6 /* Array+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+JSON.swift"; sourceTree = "<group>"; };
-		F95FE5672CE74ABC0036C6A6 /* AudioCallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5682CE74ABC0036C6A6 /* AudioCallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+Equatable.swift"; sourceTree = "<group>"; };
-		F95FE5692CE74ABC0036C6A6 /* AudioCallOptions+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallOptions+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE56A2CE74ABC0036C6A6 /* AudioCallType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallType+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE56B2CE74ABC0036C6A6 /* AudioCallType+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioCallType+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE56C2CE74ABC0036C6A6 /* CallKitConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallKitConfiguration+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE56D2CE74ABC0036C6A6 /* CallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE56E2CE74ABC0036C6A6 /* CallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+Equatable.swift"; sourceTree = "<group>"; };
-		F95FE56F2CE74ABC0036C6A6 /* CallOptions+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallOptions+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE5702CE74ABC0036C6A6 /* CallType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallType+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5712CE74ABC0036C6A6 /* CallType+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CallType+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE5722CE74ABC0036C6A6 /* ChatToolConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatToolConfiguration+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5732CE74ABC0036C6A6 /* CreateCallOptions+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5742CE74ABC0036C6A6 /* CreateCallOptions+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+Equatable.swift"; sourceTree = "<group>"; };
-		F95FE5752CE74ABC0036C6A6 /* CreateCallOptions+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateCallOptions+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE5762CE74ABC0036C6A6 /* DTOs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTOs.swift; sourceTree = "<group>"; };
-		F95FE5772CE74ABC0036C6A6 /* Environment+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5782CE74ABC0036C6A6 /* Environment+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE5792CE74ABC0036C6A6 /* IosConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IosConfiguration+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE57A2CE74ABC0036C6A6 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
-		F95FE57B2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KaleyraVideoConfiguration+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE57C2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KaleyraVideoConfiguration+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE57D2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift"; sourceTree = "<group>"; };
-		F95FE57E2CE74ABC0036C6A6 /* RecordingType+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordingType+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE57F2CE74ABC0036C6A6 /* RecordingType+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordingType+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE5802CE74ABC0036C6A6 /* Region+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Region+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5812CE74ABC0036C6A6 /* Region+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Region+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE5822CE74ABC0036C6A6 /* ScreenShareToolConfiguration+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScreenShareToolConfiguration+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5832CE74ABC0036C6A6 /* Tools+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tools+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5842CE74ABC0036C6A6 /* UserDetails+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetails+Decodable.swift"; sourceTree = "<group>"; };
-		F95FE5852CE74ABC0036C6A6 /* UserDetails+KaleyraVideoSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetails+KaleyraVideoSDK.swift"; sourceTree = "<group>"; };
-		F95FE5862CE74ABC0036C6A6 /* VoipHandlingStrategy+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VoipHandlingStrategy+Decodable.swift"; sourceTree = "<group>"; };
 		F95FE5882CE74ABC0036C6A6 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		F95FE5892CE74ABC0036C6A6 /* DispatchQueue+isMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+isMain.swift"; sourceTree = "<group>"; };
 		F95FE58A2CE74ABC0036C6A6 /* Locking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locking.swift; sourceTree = "<group>"; };
@@ -508,41 +510,42 @@
 		F95FE5872CE74ABC0036C6A6 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
-				F95FE5642CE74ABC0036C6A6 /* AccessTokenRequest+Encodable.swift */,
-				F95FE5652CE74ABC0036C6A6 /* AccessTokenResponse+Decodable.swift */,
-				F95FE5662CE74ABC0036C6A6 /* Array+JSON.swift */,
-				F95FE5672CE74ABC0036C6A6 /* AudioCallOptions+Decodable.swift */,
-				F95FE5682CE74ABC0036C6A6 /* AudioCallOptions+Equatable.swift */,
-				F95FE5692CE74ABC0036C6A6 /* AudioCallOptions+KaleyraVideoSDK.swift */,
-				F95FE56A2CE74ABC0036C6A6 /* AudioCallType+Decodable.swift */,
-				F95FE56B2CE74ABC0036C6A6 /* AudioCallType+KaleyraVideoSDK.swift */,
-				F95FE56C2CE74ABC0036C6A6 /* CallKitConfiguration+Decodable.swift */,
-				F95FE56D2CE74ABC0036C6A6 /* CallOptions+Decodable.swift */,
-				F95FE56E2CE74ABC0036C6A6 /* CallOptions+Equatable.swift */,
-				F95FE56F2CE74ABC0036C6A6 /* CallOptions+KaleyraVideoSDK.swift */,
-				F95FE5702CE74ABC0036C6A6 /* CallType+Decodable.swift */,
-				F95FE5712CE74ABC0036C6A6 /* CallType+KaleyraVideoSDK.swift */,
-				F95FE5722CE74ABC0036C6A6 /* ChatToolConfiguration+Decodable.swift */,
-				F95FE5732CE74ABC0036C6A6 /* CreateCallOptions+Decodable.swift */,
-				F95FE5742CE74ABC0036C6A6 /* CreateCallOptions+Equatable.swift */,
-				F95FE5752CE74ABC0036C6A6 /* CreateCallOptions+KaleyraVideoSDK.swift */,
-				F95FE5762CE74ABC0036C6A6 /* DTOs.swift */,
-				F95FE5772CE74ABC0036C6A6 /* Environment+Decodable.swift */,
-				F95FE5782CE74ABC0036C6A6 /* Environment+KaleyraVideoSDK.swift */,
-				F95FE5792CE74ABC0036C6A6 /* IosConfiguration+Decodable.swift */,
-				F95FE57A2CE74ABC0036C6A6 /* JSONDecodable.swift */,
-				F95FE57B2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+Decodable.swift */,
-				F95FE57C2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift */,
-				F95FE57D2CE74ABC0036C6A6 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift */,
-				F95FE57E2CE74ABC0036C6A6 /* RecordingType+Decodable.swift */,
-				F95FE57F2CE74ABC0036C6A6 /* RecordingType+KaleyraVideoSDK.swift */,
-				F95FE5802CE74ABC0036C6A6 /* Region+Decodable.swift */,
-				F95FE5812CE74ABC0036C6A6 /* Region+KaleyraVideoSDK.swift */,
-				F95FE5822CE74ABC0036C6A6 /* ScreenShareToolConfiguration+Decodable.swift */,
-				F95FE5832CE74ABC0036C6A6 /* Tools+Decodable.swift */,
-				F95FE5842CE74ABC0036C6A6 /* UserDetails+Decodable.swift */,
-				F95FE5852CE74ABC0036C6A6 /* UserDetails+KaleyraVideoSDK.swift */,
-				F95FE5862CE74ABC0036C6A6 /* VoipHandlingStrategy+Decodable.swift */,
+				F941E81C2CECF7FC007A8423 /* AccessTokenRequest+Encodable.swift */,
+				F941E8262CECF7FC007A8423 /* AccessTokenResponse+Decodable.swift */,
+				F941E8212CECF7FC007A8423 /* Array+JSON.swift */,
+				F941E8282CECF7FC007A8423 /* AudioCallOptions+Decodable.swift */,
+				F941E8272CECF7FC007A8423 /* AudioCallOptions+Equatable.swift */,
+				F941E81F2CECF7FC007A8423 /* AudioCallOptions+KaleyraVideoSDK.swift */,
+				F941E8312CECF7FC007A8423 /* AudioCallType+Decodable.swift */,
+				F941E8292CECF7FC007A8423 /* AudioCallType+KaleyraVideoSDK.swift */,
+				F941E82B2CECF7FC007A8423 /* CallKitConfiguration+Decodable.swift */,
+				F941E81D2CECF7FC007A8423 /* CallOptions+Decodable.swift */,
+				F941E82A2CECF7FC007A8423 /* CallOptions+Equatable.swift */,
+				F941E8322CECF7FC007A8423 /* CallOptions+KaleyraVideoSDK.swift */,
+				F941E81A2CECF7FC007A8423 /* CallType+Decodable.swift */,
+				F941E8172CECF7FC007A8423 /* CallType+KaleyraVideoSDK.swift */,
+				F941E81E2CECF7FC007A8423 /* ChatToolConfiguration+Decodable.swift */,
+				F941E8232CECF7FC007A8423 /* CreateCallOptions+Decodable.swift */,
+				F941E8352CECF7FC007A8423 /* CreateCallOptions+Equatable.swift */,
+				F941E82D2CECF7FC007A8423 /* CreateCallOptions+KaleyraVideoSDK.swift */,
+				F941E8142CECF7FC007A8423 /* DTOs.swift */,
+				F941E82C2CECF7FC007A8423 /* Environment+Decodable.swift */,
+				F941E8182CECF7FC007A8423 /* Environment+KaleyraVideoSDK.swift */,
+				F941E8162CECF7FC007A8423 /* IosConfiguration+Decodable.swift */,
+				F941E8152CECF7FC007A8423 /* JSONDecodable.swift */,
+				F941E8252CECF7FC007A8423 /* KaleyraVideoConfiguration+Decodable.swift */,
+				F941E8332CECF7FC007A8423 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift */,
+				F941E8192CECF7FC007A8423 /* RecordingType+Decodable.swift */,
+				F941E82E2CECF7FC007A8423 /* RecordingType+KaleyraVideoSDK.swift */,
+				F941E8342CECF7FC007A8423 /* Region+Decodable.swift */,
+				F941E8222CECF7FC007A8423 /* Region+KaleyraVideoSDK.swift */,
+				F941E8362CECF7FC007A8423 /* ScreenShareToolConfiguration+Decodable.swift */,
+				F941E8242CECF7FC007A8423 /* ToolsConfiguration+Decodable.swift */,
+				F941E82F2CECF7FC007A8423 /* ToolsConfiguration+KaleyraVideoSDK.swift */,
+				F941E81B2CECF7FC007A8423 /* ToolsConfiguration+UserInterfacePresenterConfiguration.swift */,
+				F941E8202CECF7FC007A8423 /* UserDetails+Decodable.swift */,
+				F941E8302CECF7FC007A8423 /* UserDetails+KaleyraVideoSDK.swift */,
+				F941E8372CECF7FC007A8423 /* VoipHandlingStrategy+Decodable.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -839,73 +842,74 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95FE5AF2CE74ABC0036C6A6 /* AudioCallType+Decodable.swift in Sources */,
+				F941E8562CECF7FC007A8423 /* CallOptions+KaleyraVideoSDK.swift in Sources */,
+				F941E8582CECF7FC007A8423 /* Region+Decodable.swift in Sources */,
 				F95FE5A02CE74ABC0036C6A6 /* ChatClientEventsReporter.swift in Sources */,
+				F941E8592CECF7FC007A8423 /* CreateCallOptions+Equatable.swift in Sources */,
+				F941E83D2CECF7FC007A8423 /* RecordingType+Decodable.swift in Sources */,
+				F941E8472CECF7FC007A8423 /* CreateCallOptions+Decodable.swift in Sources */,
 				F95FE5A72CE74ABC0036C6A6 /* VideoHybridNativeBridge.swift in Sources */,
+				F941E8552CECF7FC007A8423 /* AudioCallType+Decodable.swift in Sources */,
+				F941E83F2CECF7FC007A8423 /* ToolsConfiguration+UserInterfacePresenterConfiguration.swift in Sources */,
 				F95FE5A12CE74ABC0036C6A6 /* ClientState.swift in Sources */,
-				F95FE5A92CE74ABC0036C6A6 /* AccessTokenRequest+Encodable.swift in Sources */,
+				F941E8452CECF7FC007A8423 /* Array+JSON.swift in Sources */,
+				F941E8542CECF7FC007A8423 /* UserDetails+KaleyraVideoSDK.swift in Sources */,
 				F95FE59A2CE74ABC0036C6A6 /* KaleyraVideoSDKProtocol.swift in Sources */,
 				F95FE5D32CE74ABC0036C6A6 /* WindowViewControllerPresenter.swift in Sources */,
+				F941E8512CECF7FC007A8423 /* CreateCallOptions+KaleyraVideoSDK.swift in Sources */,
 				F95FE59E2CE74ABC0036C6A6 /* EventEmitter.swift in Sources */,
-				F95FE5AA2CE74ABC0036C6A6 /* AccessTokenResponse+Decodable.swift in Sources */,
-				F95FE5C42CE74ABC0036C6A6 /* RecordingType+KaleyraVideoSDK.swift in Sources */,
-				F95FE5C82CE74ABC0036C6A6 /* Tools+Decodable.swift in Sources */,
+				F941E85A2CECF7FC007A8423 /* ScreenShareToolConfiguration+Decodable.swift in Sources */,
 				F95FE5D52CE74ABC0036C6A6 /* UserInterfacePresenter.swift in Sources */,
-				F95FE5B82CE74ABC0036C6A6 /* CreateCallOptions+Decodable.swift in Sources */,
-				F95FE5BB2CE74ABC0036C6A6 /* DTOs.swift in Sources */,
+				F941E83A2CECF7FC007A8423 /* IosConfiguration+Decodable.swift in Sources */,
+				F941E84A2CECF7FC007A8423 /* AccessTokenResponse+Decodable.swift in Sources */,
 				F95FE5A62CE74ABC0036C6A6 /* URL+FromString.swift in Sources */,
-				F95FE5AE2CE74ABC0036C6A6 /* AudioCallOptions+KaleyraVideoSDK.swift in Sources */,
 				F95FE5D42CE74ABC0036C6A6 /* KaleyraVideoSDKUserInterfacePresenter.swift in Sources */,
 				F95FE59C2CE74ABC0036C6A6 /* TokenProvider.swift in Sources */,
+				F941E83C2CECF7FC007A8423 /* Environment+KaleyraVideoSDK.swift in Sources */,
 				F95FE5A82CE74ABC0036C6A6 /* VideoHybridNativeBridgeError.swift in Sources */,
+				F941E8502CECF7FC007A8423 /* Environment+Decodable.swift in Sources */,
+				F941E8442CECF7FC007A8423 /* UserDetails+Decodable.swift in Sources */,
+				F941E8532CECF7FC007A8423 /* ToolsConfiguration+KaleyraVideoSDK.swift in Sources */,
+				F941E8422CECF7FC007A8423 /* ChatToolConfiguration+Decodable.swift in Sources */,
+				F941E84B2CECF7FC007A8423 /* AudioCallOptions+Equatable.swift in Sources */,
 				F95FE5A42CE74ABC0036C6A6 /* Events+CaseIterable.swift in Sources */,
 				F95FE5CD2CE74ABC0036C6A6 /* DispatchQueue+isMain.swift in Sources */,
-				F95FE5B92CE74ABC0036C6A6 /* CreateCallOptions+Equatable.swift in Sources */,
 				F95FE5992CE74ABC0036C6A6 /* CallWindowProtocol.swift in Sources */,
+				F941E84C2CECF7FC007A8423 /* AudioCallOptions+Decodable.swift in Sources */,
 				F95FE5A22CE74ABC0036C6A6 /* EventsReporter.swift in Sources */,
-				F95FE5C62CE74ABC0036C6A6 /* Region+KaleyraVideoSDK.swift in Sources */,
-				F95FE5AC2CE74ABC0036C6A6 /* AudioCallOptions+Decodable.swift in Sources */,
+				F941E8382CECF7FC007A8423 /* DTOs.swift in Sources */,
 				6D98D77A289818B3008EEF02 /* CordovaEventEmitter.swift in Sources */,
 				F95FE59B2CE74ABC0036C6A6 /* AccessTokenRequester.swift in Sources */,
-				F95FE5AB2CE74ABC0036C6A6 /* Array+JSON.swift in Sources */,
-				F95FE5B62CE74ABC0036C6A6 /* CallType+KaleyraVideoSDK.swift in Sources */,
-				F95FE5B12CE74ABC0036C6A6 /* CallKitConfiguration+Decodable.swift in Sources */,
 				F95FE5972CE74ABC0036C6A6 /* UsersDetailsProvider.swift in Sources */,
+				F941E83B2CECF7FC007A8423 /* CallType+KaleyraVideoSDK.swift in Sources */,
+				F941E8492CECF7FC007A8423 /* KaleyraVideoConfiguration+Decodable.swift in Sources */,
+				F941E8412CECF7FC007A8423 /* CallOptions+Decodable.swift in Sources */,
 				F95FE5A52CE74ABC0036C6A6 /* Events+Description.swift in Sources */,
-				F95FE5B32CE74ABC0036C6A6 /* CallOptions+Equatable.swift in Sources */,
-				F95FE5CB2CE74ABC0036C6A6 /* VoipHandlingStrategy+Decodable.swift in Sources */,
-				F95FE5C02CE74ABC0036C6A6 /* KaleyraVideoConfiguration+Decodable.swift in Sources */,
+				F941E85B2CECF7FC007A8423 /* VoipHandlingStrategy+Decodable.swift in Sources */,
+				F941E84E2CECF7FC007A8423 /* CallOptions+Equatable.swift in Sources */,
+				F941E8402CECF7FC007A8423 /* AccessTokenRequest+Encodable.swift in Sources */,
+				F941E8432CECF7FC007A8423 /* AudioCallOptions+KaleyraVideoSDK.swift in Sources */,
 				F95FE5CF2CE74ABC0036C6A6 /* MainQueueDispatcher.swift in Sources */,
-				F95FE5BE2CE74ABC0036C6A6 /* IosConfiguration+Decodable.swift in Sources */,
-				F95FE5C12CE74ABC0036C6A6 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift in Sources */,
 				F95FE5D62CE74ABC0036C6A6 /* UserInterfacePresenter+MainQueueRelay.swift in Sources */,
-				F95FE5C72CE74ABC0036C6A6 /* ScreenShareToolConfiguration+Decodable.swift in Sources */,
-				F95FE5C92CE74ABC0036C6A6 /* UserDetails+Decodable.swift in Sources */,
 				F95FE59F2CE74ABC0036C6A6 /* CallClientEventsReporter.swift in Sources */,
 				F95FE5D02CE74ABC0036C6A6 /* MainQueueRelay.swift in Sources */,
+				F941E8572CECF7FC007A8423 /* KaleyraVideoConfiguration+KaleyraVideoSDK.swift in Sources */,
 				F95FE5982CE74ABC0036C6A6 /* BroadcastConfigurationPlistReader.swift in Sources */,
 				6D1D72F1289A79410068E335 /* VideoNativePlugin.swift in Sources */,
-				F95FE5AD2CE74ABC0036C6A6 /* AudioCallOptions+Equatable.swift in Sources */,
-				F95FE5B72CE74ABC0036C6A6 /* ChatToolConfiguration+Decodable.swift in Sources */,
 				F95FE5A32CE74ABC0036C6A6 /* Events.swift in Sources */,
-				F95FE5CA2CE74ABC0036C6A6 /* UserDetails+KaleyraVideoSDK.swift in Sources */,
+				F941E8392CECF7FC007A8423 /* JSONDecodable.swift in Sources */,
 				F95FE5D22CE74ABC0036C6A6 /* ViewControllerPresenter.swift in Sources */,
-				F95FE5B52CE74ABC0036C6A6 /* CallType+Decodable.swift in Sources */,
-				F95FE5BF2CE74ABC0036C6A6 /* JSONDecodable.swift in Sources */,
-				F95FE5B22CE74ABC0036C6A6 /* CallOptions+Decodable.swift in Sources */,
+				F941E8522CECF7FC007A8423 /* RecordingType+KaleyraVideoSDK.swift in Sources */,
 				F95FE5D12CE74ABC0036C6A6 /* PresentingViewControllerViewControllerPresenter.swift in Sources */,
-				F95FE5BA2CE74ABC0036C6A6 /* CreateCallOptions+KaleyraVideoSDK.swift in Sources */,
 				F95FE5CC2CE74ABC0036C6A6 /* Atomic.swift in Sources */,
-				F95FE5C22CE74ABC0036C6A6 /* KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift in Sources */,
+				F941E84D2CECF7FC007A8423 /* AudioCallType+KaleyraVideoSDK.swift in Sources */,
+				F941E84F2CECF7FC007A8423 /* CallKitConfiguration+Decodable.swift in Sources */,
+				F941E8462CECF7FC007A8423 /* Region+KaleyraVideoSDK.swift in Sources */,
 				F982D7992A389C7500F83688 /* _KaleyraVideoHybridVersionInfo.swift in Sources */,
-				F95FE5B42CE74ABC0036C6A6 /* CallOptions+KaleyraVideoSDK.swift in Sources */,
-				F95FE5BD2CE74ABC0036C6A6 /* Environment+KaleyraVideoSDK.swift in Sources */,
-				F95FE5C32CE74ABC0036C6A6 /* RecordingType+Decodable.swift in Sources */,
-				F95FE5BC2CE74ABC0036C6A6 /* Environment+Decodable.swift in Sources */,
-				F95FE5C52CE74ABC0036C6A6 /* Region+Decodable.swift in Sources */,
+				F941E8482CECF7FC007A8423 /* ToolsConfiguration+Decodable.swift in Sources */,
 				F95FE5962CE74ABC0036C6A6 /* UsersDetailsCache.swift in Sources */,
-				F95FE5B02CE74ABC0036C6A6 /* AudioCallType+KaleyraVideoSDK.swift in Sources */,
 				F95FE5CE2CE74ABC0036C6A6 /* Locking.swift in Sources */,
+				F941E83E2CECF7FC007A8423 /* CallType+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
