@@ -98,6 +98,7 @@ class VideoNativePlugin: CDVPlugin {
 
     // MARK: - Configure Tools
 
+    @objc
     func configureTools(_ command: CDVInvokedUrlCommand) {
         performer(for: command).perform {
             let json = try unwrap(command.arguments.first as? String)
