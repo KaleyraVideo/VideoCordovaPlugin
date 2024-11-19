@@ -3,6 +3,7 @@
 
 package com.kaleyra.video_hybrid_native_bridge.events.reporter
 
+import com.kaleyra.video.State
 import com.kaleyra.video_common_ui.KaleyraVideo
 import com.kaleyra.video_hybrid_native_bridge.events.Events.CallModuleStatusChanged
 import com.kaleyra.video_hybrid_native_bridge.events.Events.ChatModuleStatusChanged
@@ -22,19 +23,33 @@ class ModuleEventsReporter(
 
     private var jobs: MutableSet<Job> = mutableSetOf()
 
+    private var previousCallState: State? = null
+
+    private var previousChatState: State? = null
+
     override fun start() {
         stop()
         jobs += sdk.conference.state
-            .mapNotNull { it.toCrossPlatformModuleStatus() }
+            .mapNotNull { state ->
+                state.toCrossPlatformModuleStatus(previousCallState).also {
+                    previousCallState = state
+                }
+            }
             .onEach { state -> eventsEmitter.sendEvent(CallModuleStatusChanged, state) }
             .launchIn(coroutineScope)
         jobs += sdk.conversation.state
-            .mapNotNull { it.toCrossPlatformModuleStatus()  }
+            .mapNotNull { state ->
+                state.toCrossPlatformModuleStatus(previousChatState).also {
+                    previousChatState = state
+                }
+            }
             .onEach { state -> eventsEmitter.sendEvent(ChatModuleStatusChanged, state) }
             .launchIn(coroutineScope)
     }
 
     override fun stop() {
+        previousCallState = null
+        previousChatState = null
         jobs.forEach { it.cancel() }
         jobs.clear()
     }
