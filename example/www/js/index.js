@@ -88,6 +88,23 @@ var app = {
             environment: KaleyraVideo.environments.new(sdkConfig.environment),
             appID: sdkConfig.appIdentifier,
             region: KaleyraVideo.regions.new(sdkConfig.region),
+            tools: {
+                chat: {
+                    audioCallOption: {
+                        type: KaleyraVideo.audioCallTypes.AUDIO,
+                        recordingType: KaleyraVideo.recordingTypes.NONE,
+                    },
+                    videoCallOption: {
+                        recordingType: KaleyraVideo.recordingTypes.NONE,
+                    }
+                },
+                fileShare: true,
+                whiteboard: true,
+                screenShare: {
+                    inApp: true,
+                    wholeDevice: true
+                }
+            },
             logEnabled: true,
             // optional you can disable one or more of the following capabilities, by default callkit is enabled
             iosConfig: {
@@ -97,24 +114,6 @@ var app = {
                     ringtoneSoundName: "custom_ringtone.mp3" // optional
                 },
                 voipHandlingStrategy: KaleyraVideo.voipHandlingStrategies.AUTOMATIC
-            }
-        });
-
-        kaleyraVideo.configureTools({
-            chat: {
-                audioCallOption: {
-                    type: KaleyraVideo.audioCallTypes.AUDIO,
-                    recordingType: KaleyraVideo.recordingTypes.NONE,
-                },
-                videoCallOption: {
-                    recordingType: KaleyraVideo.recordingTypes.NONE,
-                }
-            },
-            fileShare: true,
-            whiteboard: true,
-            screenShare: {
-                inApp: true,
-                wholeDevice: true
             }
         });
 

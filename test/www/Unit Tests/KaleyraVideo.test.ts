@@ -11,7 +11,6 @@ import {CallType} from "../../../native-bridge/TypeScript/types/CallType";
 import {RecordingType} from "../../../native-bridge/TypeScript/types/RecordingType";
 import {CallDisplayMode} from "../../../native-bridge/TypeScript/types/CallDisplayMode";
 import {KaleyraVideoConfiguration} from "../../../native-bridge/TypeScript/types/KaleyraVideoConfiguration";
-import {ToolsConfiguration} from "../../../native-bridge/TypeScript/types/ToolsConfiguration";
 import {AudioCallType} from "../../../native-bridge/TypeScript/types/AudioCallType";
 
 let device: DeviceStub;
@@ -60,6 +59,23 @@ describe("Plugin setup", () => {
             environment: Environments.sandbox(),
             region: Regions.europe(),
             logEnabled: true,
+            tools: {
+                chat: {
+                    audioCallOption: {
+                        type: KaleyraVideo.audioCallTypes.AUDIO,
+                        recordingType: KaleyraVideo.recordingTypes.NONE,
+                    },
+                    videoCallOption: {
+                        recordingType: KaleyraVideo.recordingTypes.NONE,
+                    },
+                },
+                fileShare: true,
+                screenShare: {
+                    inApp: true,
+                    wholeDevice: true,
+                },
+                whiteboard: true,
+            },
             iosConfig: {
                 callkit: {
                     enabled: true,
@@ -88,6 +104,18 @@ describe("Plugin setup", () => {
         expect(firstArg.iosConfig.callkit.enabled).toEqual(true);
         expect(firstArg.iosConfig.callkit.appIconName).toMatch("AppIcon");
         expect(firstArg.iosConfig.callkit.ringtoneSoundName).toMatch("ringtone.mp3");
+
+        expect(firstArg.tools.chat).toBeDefined();
+        expect(firstArg.tools.chat.audioCallOption).toBeDefined();
+        expect(firstArg.tools.chat.audioCallOption.type).toEqual(AudioCallType.AUDIO);
+        expect(firstArg.tools.chat.audioCallOption.recordingType).toEqual(RecordingType.NONE);
+
+        expect(firstArg.tools.chat.videoCallOption).toBeDefined();
+        expect(firstArg.tools.chat.videoCallOption.recordingType).toEqual(RecordingType.NONE);
+        expect(firstArg.tools.whiteboard).toEqual(true);
+        expect(firstArg.tools.fileShare).toEqual(true);
+        expect(firstArg.tools.screenShare.inApp).toEqual(true);
+        expect(firstArg.tools.screenShare.wholeDevice).toEqual(true);
     });
 
     test('When running on generic device, calls "configureBridge" action with the mandatory only arguments provided in config parameter', () => {
@@ -114,62 +142,7 @@ describe("Plugin setup", () => {
         expect(firstArg.logEnabled).toBeUndefined();
 
         expect(firstArg.iosConfig).toBeUndefined();
-    });
-});
-
-describe("Configure tools", () => {
-    test("Throws an illegal argument when passing an invalid object", () => {
-        const sut = makeSUT();
-
-        const configure = () => {
-            sut.configureTools("" as ToolsConfiguration)
-        };
-
-        expect(configure).toThrowError(Error);
-    });
-
-    test('Calls "configureTools" action with the argument provided in config parameter', () => {
-        const sut = makeSUT();
-        const tools = {
-            chat: {
-                audioCallOption: {
-                    type: KaleyraVideo.audioCallTypes.AUDIO,
-                    recordingType: KaleyraVideo.recordingTypes.NONE,
-                },
-                videoCallOption: {
-                    recordingType: KaleyraVideo.recordingTypes.NONE,
-                },
-            },
-            fileShare: true,
-            screenShare: {
-                inApp: true,
-                wholeDevice: true,
-            },
-            whiteboard: true,
-        }
-
-        sut.configureTools(tools);
-        expect(cordovaSpy.execInvocations.length).toEqual(2);
-
-        const invocation = cordovaSpy.execInvocations[1];
-        expect(invocation.service).toMatch("VideoNativePlugin");
-        expect(invocation.action).toMatch("configureTools");
-        expect(invocation.args).toBeDefined();
-        
-        const firstArg = JSON.parse(invocation.args[0]);
-        expect(firstArg).toBeDefined();
-
-        expect(firstArg.chat).toBeDefined();
-        expect(firstArg.chat.audioCallOption).toBeDefined();
-        expect(firstArg.chat.audioCallOption.type).toEqual(AudioCallType.AUDIO);
-        expect(firstArg.chat.audioCallOption.recordingType).toEqual(RecordingType.NONE);
-
-        expect(firstArg.chat.videoCallOption).toBeDefined();
-        expect(firstArg.chat.videoCallOption.recordingType).toEqual(RecordingType.NONE);
-        expect(firstArg.whiteboard).toEqual(true);
-        expect(firstArg.fileShare).toEqual(true);
-        expect(firstArg.screenShare.inApp).toEqual(true);
-        expect(firstArg.screenShare.wholeDevice).toEqual(true);
+        expect(firstArg.tools).toBeUndefined();
     });
 });
 

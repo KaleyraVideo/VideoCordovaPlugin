@@ -96,17 +96,6 @@ class VideoNativePlugin: CDVPlugin {
         eventEmitter.callbackId = callbackId
     }
 
-    // MARK: - Configure Tools
-
-    @objc
-    func configureTools(_ command: CDVInvokedUrlCommand) {
-        performer(for: command).perform {
-            let json = try unwrap(command.arguments.first as? String)
-            let config = try ToolsConfiguration.decodeJSON(json)
-            try plugin.configureTools(config)
-        }
-    }
-
     // MARK: - Connect / disconnect
 
     @objc

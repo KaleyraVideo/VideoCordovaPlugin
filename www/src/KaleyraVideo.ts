@@ -17,7 +17,6 @@ import {RecordingType} from "../../native-bridge/TypeScript/types/RecordingType"
 import {AccessTokenResponse} from "../../native-bridge/TypeScript/types/AccessTokenResponse";
 import {AudioCallType} from "../../native-bridge/TypeScript/types/AudioCallType";
 import {VoipHandlingStrategy} from "../../native-bridge/TypeScript/types/VoipHandlingStrategy";
-import { ToolsConfiguration } from "../../native-bridge/TypeScript/types/ToolsConfiguration";
 
 /**
  * @ignore
@@ -133,17 +132,6 @@ export default class KaleyraVideo extends EventListener {
 
     private constructor() {
         super();
-    }
-
-    /**
-     * Call this method to cofigure the tools used by the SDK when a call is created or received
-     * @param params
-     * @throws IllegalArgumentError
-     */
-    configureTools(params: ToolsConfiguration) {
-        assert<ToolsConfiguration>(params);
-
-        cordova.exec(null, null, "VideoNativePlugin", "configureTools", [JSON.stringify(params)]);
     }
 
     /**

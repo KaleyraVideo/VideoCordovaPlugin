@@ -89,14 +89,13 @@
         <source-file src="native-bridge/iOS/Source/DTOs/JSONDecodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/KaleyraVideoConfiguration+Decodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/KaleyraVideoConfiguration+KaleyraVideoSDK.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/KaleyraVideoConfiguration+UserInterfacePresenterConfiguration.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/RecordingType+Decodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/RecordingType+KaleyraVideoSDK.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/Region+Decodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/Region+KaleyraVideoSDK.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/ScreenShareToolConfiguration+Decodable.swift" />
-        <source-file src="native-bridge/iOS/Source/DTOs/ToolsConfiguration+Decodable.swift" />
-        <source-file src="native-bridge/iOS/Source/DTOs/ToolsConfiguration+KaleyraVideoSDK.swift" />
-        <source-file src="native-bridge/iOS/Source/DTOs/ToolsConfiguration+UserInterfacePresenterConfiguration.swift" />
+        <source-file src="native-bridge/iOS/Source/DTOs/Tools+Decodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/UserDetails+Decodable.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/UserDetails+KaleyraVideoSDK.swift" />
         <source-file src="native-bridge/iOS/Source/DTOs/VoipHandlingStrategy+Decodable.swift" />
