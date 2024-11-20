@@ -3,14 +3,23 @@
 
 ext {
     if (project.hasProperty('cdvCompileSdkVersion')) {
-        cdvCompileSdkVersion = 31
+        cdvCompileSdkVersion = 34
     }
 
     if (project.hasProperty('cdvBuildToolsVersion')) {
-        cdvBuildToolsVersion = '31.0.0'
+        cdvBuildToolsVersion = '34.0.0'
     }
 
     if (project.hasProperty('cdvTargetSdkVersion')) {
-        cdvTargetSdkVersion = 31
+        cdvTargetSdkVersion = 34
+    }
+
+    dependencies {
+        repositories {
+            google()
+            mavenCentral()
+            gradlePluginPortal()
+            maven { url 'https://maven.bandyer.com/releases' }
+        }
     }
 }

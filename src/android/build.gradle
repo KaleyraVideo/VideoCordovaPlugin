@@ -1,6 +1,5 @@
 // Copyright © 2018-2023 Kaleyra S.p.a. All Rights Reserved.
 // See LICENSE for licensing information
-
 def crossPlatformSupportPath = "${project.projectDir.getAbsolutePath()}/../../native-bridge/android"
 apply from: "${crossPlatformSupportPath}/build.gradle"
 
@@ -8,12 +7,13 @@ def jsonFile = file("${project.projectDir.getAbsolutePath()}/../../package.json"
 def properties = new groovy.json.JsonSlurper().parseText(jsonFile.text)
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
+    namespace 'com.kaleyra.video_cordova_plugin'
 
     defaultConfig {
-        minSdkVersion 22
-        targetSdkVersion 31
+        minSdkVersion 24
+        targetSdkVersion 34
         versionCode 1
         versionName properties.version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -32,6 +32,10 @@ android {
 
     lintOptions {
         abortOnError false
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 }
 

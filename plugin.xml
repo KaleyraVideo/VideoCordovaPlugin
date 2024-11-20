@@ -140,8 +140,15 @@
         <dependency id="cordova-plugin-add-swift-support" version="2.0.2" />
     </platform>
 
-    <platform name="android" kotlin="1.5.32">
-        <apply-plugin>kotlin-kapt</apply-plugin>
+    <platform name="android">
+
+        <hook type="after_plugin_add" src="src/android/hooks/add_ksp_root_build_gradle.js"/>
+        <hook type="after_platform_add" src="src/android/hooks/add_ksp_root_build_gradle.js"/>
+        <hook type="after_prepare" src="src/android/hooks/add_ksp_root_build_gradle.js"/>
+
+        <hook type="after_plugin_add" src="src/android/hooks/merge_settings_gradle.js"/>
+        <hook type="after_platform_add" src="src/android/hooks/merge_settings_gradle.js"/>
+        <hook type="after_prepare" src="src/android/hooks/merge_settings_gradle.js"/>
 
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="VideoNativePlugin">
@@ -162,10 +169,9 @@
         <source-file src="native-bridge/android/src/main/java/com/kaleyra/video_hybrid_native_bridge" target-dir="java/com/kaleyra" />
         <resource-file src="src/android/src/main/assets/kaleyra_video_wrapper_info.txt" target="assets/kaleyra_video_wrapper_info.txt" />
 
-        <framework custom="true" src="native-bridge/android/build.gradle" type="gradleReference" />
         <framework custom="true" src="src/android/cordova.gradle" type="gradleReference" />
+        <framework custom="true" src="native-bridge/android/build.gradle" type="gradleReference" />
 
-        <dependency id="cordova-support-kotlin" url="https://github.com/kainonly/cordova-support-kotlin.git" />
         <dependency id="cordova-plugin-device" url="https://github.com/apache/cordova-plugin-device" />
     </platform>
 </plugin>

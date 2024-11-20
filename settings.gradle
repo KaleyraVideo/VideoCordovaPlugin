@@ -1,5 +1,25 @@
-include ':cordova_plugin'
-include ':native_bridge'
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.bandyer.com/prebuilts" }
+        maven { url "https://maven.bandyer.com/releases" }
+    }
 
-project(':cordova_plugin').projectDir = new File('src/android')
-project(':native_bridge').projectDir = new File('native-bridge/android')
+    def catalogVersion = "2024.11.01"
+
+    versionCatalogs {
+        create("kaleyraCatalog") {
+            from("com.kaleyra:kaleyra-libs-version-catalog:$catalogVersion")
+        }
+        create("catalog") {
+            from("com.kaleyra:video-sdk-version-catalog:$catalogVersion")
+        }
+        create("sampleAppCatalog") {
+            from("com.kaleyra:video-app-version-catalog:$catalogVersion")
+        }
+    }
+}
