@@ -170,7 +170,7 @@
         <resource-file src="src/android/src/main/assets/kaleyra_video_wrapper_info.txt" target="assets/kaleyra_video_wrapper_info.txt" />
 
         <framework custom="true" src="src/android/cordova.gradle" type="gradleReference" />
-        <framework custom="true" src="native-bridge/android/build.gradle" type="gradleReference" />
+        <framework custom="true" src="native-bridge/android/bridge.gradle" type="gradleReference" />
 
         <dependency id="cordova-plugin-device" url="https://github.com/apache/cordova-plugin-device" />
     </platform>

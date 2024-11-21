@@ -1,7 +1,7 @@
 // Copyright © 2018-2023 Kaleyra S.p.a. All Rights Reserved.
 // See LICENSE for licensing information
 def crossPlatformSupportPath = "${project.projectDir.getAbsolutePath()}/../../native-bridge/android"
-apply from: "${crossPlatformSupportPath}/build.gradle"
+apply from: "${crossPlatformSupportPath}/bridge.gradle"
 
 def jsonFile = file("${project.projectDir.getAbsolutePath()}/../../package.json")
 def properties = new groovy.json.JsonSlurper().parseText(jsonFile.text)
