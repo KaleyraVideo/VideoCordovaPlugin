@@ -1,10 +1,7 @@
-plugins {
-    id 'com.android.library' version catalog.versions.gradleVersion
-    id "org.jetbrains.kotlin.android" version catalog.versions.jetbrainsKotlinVersion
-    id 'com.google.devtools.ksp' version catalog.versions.googleDevToolsKspVersion
-}
+def kaleyraVideoSdkVersion = "4.2.0"
 
-def kaleyraVideoSdkVersion = "4.1.1"
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.devtools.ksp'
 
 android {
     namespace 'com.kaleyra.video_hybrid_native_bridge'
@@ -44,6 +41,7 @@ dependencies {
     implementation catalog.kotlinReflect
     implementation catalog.kotlinSerializationJson
     implementation catalog.androidxRoomRuntime
+    coreLibraryDesugaring catalog.desugar
     ksp catalog.androidxRoomCompiler
 
     /*** Testing ***/
