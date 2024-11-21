@@ -1,4 +1,4 @@
-def kaleyraVideoSdkVersion = "4.1.1"
+def kaleyraVideoSdkVersion = "4.2.0"
 
 apply plugin: 'kotlin-android'
 apply plugin: 'com.google.devtools.ksp'
@@ -41,8 +41,8 @@ dependencies {
     implementation catalog.kotlinReflect
     implementation catalog.kotlinSerializationJson
     implementation catalog.androidxRoomRuntime
+    coreLibraryDesugaring catalog.desugar
     ksp catalog.androidxRoomCompiler
-    coreLibraryDesugaring(catalog.desugar)
 
     /*** Testing ***/
     testImplementation catalog.junit
