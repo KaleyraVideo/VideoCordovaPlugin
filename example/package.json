@@ -36,7 +36,6 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-enable-multidex": {},
-      "cordova-support-kotlin": {},
       "cordova-plugin-androidx": {},
       "cordova-plugin-androidx-adapter": {},
       "cordova-plugin-advanced-http": {
