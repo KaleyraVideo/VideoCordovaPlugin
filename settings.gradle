@@ -1,5 +1,4 @@
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         mavenLocal()
         google()
@@ -7,19 +6,5 @@ dependencyResolutionManagement {
         maven { url "https://jitpack.io" }
         maven { url "https://maven.bandyer.com/prebuilts" }
         maven { url "https://maven.bandyer.com/releases" }
-    }
-
-    def catalogVersion = "2024.11.01"
-
-    versionCatalogs {
-        create("kaleyraCatalog") {
-            from("com.kaleyra:kaleyra-libs-version-catalog:$catalogVersion")
-        }
-        create("catalog") {
-            from("com.kaleyra:video-sdk-version-catalog:$catalogVersion")
-        }
-        create("sampleAppCatalog") {
-            from("com.kaleyra:video-app-version-catalog:$catalogVersion")
-        }
     }
 }

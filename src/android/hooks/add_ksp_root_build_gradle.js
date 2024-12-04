@@ -3,7 +3,7 @@ const fs = require('fs');
 const buildGradlePath = './platforms/android/build.gradle';
 const kspPluginSnippet = `
 plugins {
-    id("com.google.devtools.ksp") version catalog.versions.googleDevToolsKspVersion
+    id("com.google.devtools.ksp") version "1.9.0-1.0.13"
 }
 `;
 
