@@ -44,10 +44,6 @@ jobs:
             fetch-depth: 0
             fetch-tags: true
             token: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-node@v4
-        with:
-           node-version: 16
-
       - name: Setting up environment
         run: |
           pip install pyyaml
@@ -63,25 +59,29 @@ jobs:
       - name: Update subrepo
         run: |
           git subrepo pull native-bridge -m "chore: update native-bridge"
-    
+      
+      - uses: actions/setup-node@v4
+        with:
+           node-version: 16
+      
       - name: Install node packages
-        working-directory: ./videoCordovaPlugin
         run: |
          node -v
          npm ci
+        working-directory: ./videoCordovaPlugin
     
       - name: Update package version
-        working-directory: ./videoCordovaPlugin
         run: npm run ${{ github.event.inputs.release_kind }}
+        working-directory: ./videoCordovaPlugin
         
       - name: Remove "private" constraint from package.json file
-        working-directory: ./videoCordovaPlugin
         run: |
           sed -i '' 's/\"private\": true/\"private\": false/g' package.json
           cat package.json
+        working-directory: ./videoCordovaPlugin
       
       - name: Publish to npm
         run: | 
-          working-directory: ./videoCordovaPlugin
           npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_API_KEY }}"
           npm publish
+        working-directory: ./videoCordovaPlugin
