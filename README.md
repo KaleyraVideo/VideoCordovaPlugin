@@ -4,13 +4,9 @@
 
 [![npm version](https://img.shields.io/npm/v/@kaleyra/video-cordova-plugin?color=brightgreen&label=npm%20package)][LinkNpm]
 
-## Requirements
-
-```
-npm i xml2js // needed for android 
-cordova plugin add cordova-plugin-enable-multidex // plugin needed for android 64k max limit of methods
-cordova plugin add cordova-plugin-androidx // needed for android
-```
+## Minimum requirements
+- Android 21+, gradle 8+, kotlin 1.9+
+- iOS 15+, swift 5.x
 
 ## How to run the example
 
@@ -227,8 +223,8 @@ This method will allow you to set your user details DB from which the sdk will r
 
 ```javascript
 kaleyraVideo.addUsersDetails([
-    {userID: "usr_yyy", firstName: "User1Name", lastName: "User1Surname"},
-    {userID: "usr_zzz", firstName: "User2Name", lastName: "User2Surname"},
+    {userID: "usr_yyy", name: "User1Name", imageUrl: "https://www.example.com/user1image.png"},
+    {userID: "usr_zzz", name: "User2Name", imageUrl: "https://www.example.com/user1image.png"},
 ]);
 ```
 
@@ -238,20 +234,6 @@ This method will allow you to remove all the user info from the local app DB.
 
 ```javascript
 kaleyraVideo.removeUsersDetails();
-```
-
-## Set user details format
-
-This method will allow you to specify how you want your user details to be displayed.
-> Be aware that you can specify only keywords which exist in the UserDetails type.
-
-For example: if you wish to show only the firstName while your dataset contains also the lastName you may change it here.
-
-```javascript
-kaleyraVideo.setUserDetailsFormat({
-    default: "${firstName} ${lastName}",
-    androidNotification: "${firstName} ${lastName}" // optional if you wish to personalize the details in the notification.
-});
 ```
 
 ## Remove all the cached info in preferences and DBs
@@ -267,14 +249,6 @@ For example: if you wish to show fingerprint dialog you should first put the cur
 
 ```javascript
 kaleyraVideo.setDisplayModeForCurrentCall(CallDisplayMode.FOREGROUND); // FOREGROUND, FOREGROUND_PICTURE_IN_PICTURE or CallDisplayMode.BACKGROUND
-```
-
-## Verify user
-
-To verify a user for the current call.
-
-```javascript
-kaleyraVideo.verifyCurrentCall(true);  
 ```
 
 ## iOS Notifications
