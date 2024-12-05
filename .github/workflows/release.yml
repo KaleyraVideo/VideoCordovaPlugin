@@ -65,7 +65,9 @@ jobs:
           git subrepo pull native-bridge -m "chore: update native-bridge"
     
       - name: Install node packages
-        run: npm ci
+        run: |
+         nvm use 16
+         npm ci
     
       - name: Update package version
         run: npm run ${{ github.event.inputs.release_kind }}
