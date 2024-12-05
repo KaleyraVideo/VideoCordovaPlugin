@@ -44,9 +44,10 @@ jobs:
             fetch-depth: 0
             fetch-tags: true
             token: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
            node-version: 16
+           cache: 'npm'
 
       - name: Setting up environment
         run: |
@@ -66,8 +67,7 @@ jobs:
     
       - name: Install node packages
         run: |
-         brew install nvm
-         nvm use 16
+         node -v
          npm ci
     
       - name: Update package version
