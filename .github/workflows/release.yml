@@ -66,6 +66,7 @@ jobs:
     
       - name: Install node packages
         run: |
+         brew install nvm
          nvm use 16
          npm ci
     
