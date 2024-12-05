@@ -1,1 +1,1 @@
-cordova/2.0.0
+cordova/2.0.1
