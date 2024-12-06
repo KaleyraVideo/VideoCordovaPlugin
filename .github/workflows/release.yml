@@ -71,7 +71,7 @@ jobs:
         working-directory: ./videoCordovaPlugin
     
       - name: Update package version
-        run: npm run ${{ github.event.inputs.release_kind }}
+        run: npm run ${{ inputs.release_kind }}
         working-directory: ./videoCordovaPlugin
         
       - name: Remove "private" constraint from package.json file
